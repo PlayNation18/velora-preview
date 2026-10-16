@@ -110,27 +110,102 @@
     </div>
   </header>
 
-  <main class="wrap auth-wrap">
-    <section class="auth-panel konto-wide" aria-labelledby="auth-title">
-      <p class="eyebrow">Mein Konto</p>
-      <h1 id="auth-title">Mein Konto</h1>
-      <p class="form-hint">Ihre Kontodaten und Bestellungen.</p>
+  <main class="wrap auth-wrap konto-wrap">
+    <section class="auth-panel konto-wide konto-app" aria-labelledby="auth-title">
+      <div class="konto-head">
+        <div><p class="eyebrow">Mein Konto</p><h1 id="auth-title">Willkommen<span id="konto-hello"></span></h1></div>
+        <a class="konto-points-chip" href="konto.html?bereich=punkte" data-pane-link="punkte" id="konto-points-chip" hidden><strong id="konto-points-top">0</strong> Punkte</a>
+      </div>
       <div class="form-msg" id="form-msg" role="alert" aria-live="polite" hidden></div>
       <div id="konto-box" hidden>
-        <dl class="konto-data">
-          <div><dt>Name</dt><dd id="konto-name"></dd></div>
-          <div><dt>E-Mail</dt><dd id="konto-email"></dd></div>
-        </dl>
-        <section class="orders-section" aria-labelledby="orders-title">
-          <h2 id="orders-title">Meine Bestellungen</h2>
-          <div class="form-msg" id="orders-msg" role="alert" aria-live="polite" hidden></div>
-          <div id="orders-list"><p class="form-hint">Bestellungen werden geladen …</p></div>
-          <div id="order-detail" hidden></div>
-        </section>
-        <div class="konto-actions"><a class="btn" href="shop.html">Weiter einkaufen</a><button type="button" class="btn btn-outline" id="logout-btn" data-label="Abmelden">Abmelden</button></div>
+        <div class="konto-layout">
+          <nav class="konto-nav" id="konto-nav" aria-label="Kontobereiche">
+            <a href="konto.html?bereich=konto" data-pane-link="konto">Konto <span class="nav-count"></span></a>
+            <a href="konto.html?bereich=favoriten" data-pane-link="favoriten">Favoriten <span class="nav-count" id="cnt-favoriten"></span></a>
+            <a href="konto.html?bereich=punkte" data-pane-link="punkte">Punkte sammeln <span class="nav-count" id="cnt-punkte"></span></a>
+            <a href="konto.html?bereich=rechnungen" data-pane-link="rechnungen">Rechnungen <span class="nav-count" id="cnt-rechnungen"></span></a>
+            <a href="konto.html?bereich=bestellungen" data-pane-link="bestellungen">Bestellungen <span class="nav-count" id="cnt-bestellungen"></span></a>
+            <a href="konto.html?bereich=lieferung" data-pane-link="lieferung">Lieferung <span class="nav-count" id="cnt-lieferung"></span></a>
+            <a href="konto.html?bereich=rueckgabe" data-pane-link="rueckgabe">Rückgabe <span class="nav-count" id="cnt-rueckgabe"></span></a>
+            <button type="button" class="link-btn" id="logout-btn" data-label="Abmelden" style="margin:1rem .95rem 0;text-align:left">Abmelden</button>
+          </nav>
+          <div class="konto-panes">
+            <section class="konto-pane" id="pane-konto" aria-labelledby="h-konto">
+              <h2 id="h-konto">Konto</h2>
+              <p class="form-hint">Angemeldet als <strong id="konto-name"></strong> · <span id="konto-email"></span></p>
+              <div class="form-msg" id="konto-msg" role="status" aria-live="polite" hidden></div>
+              <h3>Persönliche Daten</h3>
+              <form class="konto-form" id="profile-form" novalidate>
+                <div class="form-group"><label for="pf-salutation">Anrede</label><select id="pf-salutation"><option value="">–</option><option value="frau">Frau</option><option value="herr">Herr</option><option value="divers">Divers</option></select></div>
+                <div class="form-group"><label for="pf-birthday">Geburtstag (optional)</label><input id="pf-birthday" type="date" /><p class="field-error" id="pf-err-birthday" hidden></p></div>
+                <div class="form-group"><label for="pf-firstName">Vorname</label><input id="pf-firstName" maxlength="60" autocomplete="given-name" required /><p class="field-error" id="pf-err-firstName" hidden></p></div>
+                <div class="form-group"><label for="pf-lastName">Nachname</label><input id="pf-lastName" maxlength="60" autocomplete="family-name" required /><p class="field-error" id="pf-err-lastName" hidden></p></div>
+                <div class="form-group full"><label for="pf-phone">Telefon (optional)</label><input id="pf-phone" type="tel" maxlength="30" autocomplete="tel" /><p class="field-error" id="pf-err-phone" hidden></p></div>
+                <div class="form-actions"><button type="submit" class="btn btn-sm" data-label="Speichern">Speichern</button></div>
+              </form>
+              <h3>Adressen</h3>
+              <div class="konto-cards" id="address-list"></div>
+              <p><button type="button" class="btn btn-outline btn-sm" id="address-add">Neue Adresse</button></p>
+              <form class="konto-form" id="address-form" hidden novalidate>
+                <input type="hidden" id="ad-id" />
+                <div class="form-group full"><label for="ad-label">Bezeichnung (z. B. Zuhause, Büro)</label><input id="ad-label" maxlength="40" /></div>
+                <div class="form-group"><label for="ad-firstName">Vorname</label><input id="ad-firstName" maxlength="60" required /><p class="field-error" id="ad-err-firstName" hidden></p></div>
+                <div class="form-group"><label for="ad-lastName">Nachname</label><input id="ad-lastName" maxlength="60" required /><p class="field-error" id="ad-err-lastName" hidden></p></div>
+                <div class="form-group full"><label for="ad-street">Straße &amp; Hausnummer</label><input id="ad-street" maxlength="120" autocomplete="street-address" required /><p class="field-error" id="ad-err-street" hidden></p></div>
+                <div class="form-group"><label for="ad-zip">PLZ</label><input id="ad-zip" maxlength="12" autocomplete="postal-code" required /><p class="field-error" id="ad-err-zip" hidden></p></div>
+                <div class="form-group"><label for="ad-city">Ort</label><input id="ad-city" maxlength="80" required /><p class="field-error" id="ad-err-city" hidden></p></div>
+                <div class="form-group"><label for="ad-country">Land</label><select id="ad-country"><option value="AT">Österreich</option><option value="DE">Deutschland</option><option value="CH">Schweiz</option></select></div>
+                <div class="form-group"><label for="ad-phone">Telefon (optional)</label><input id="ad-phone" type="tel" maxlength="30" /></div>
+                <label class="check-label full" for="ad-default"><input id="ad-default" type="checkbox" /> <span>Als Standard-Lieferadresse verwenden</span></label>
+                <div class="form-actions"><button type="submit" class="btn btn-sm" data-label="Adresse speichern">Adresse speichern</button><button type="button" class="link-btn" id="address-cancel">Abbrechen</button></div>
+              </form>
+              <h3>Passwort ändern</h3>
+              <form class="konto-form" id="password-form" novalidate>
+                <div class="form-group full"><label for="pw-current">Aktuelles Passwort</label><input id="pw-current" type="password" autocomplete="current-password" maxlength="200" required /><p class="field-error" id="pw-err-current" hidden></p></div>
+                <div class="form-group"><label for="pw-new">Neues Passwort (mind. 8 Zeichen)</label><input id="pw-new" type="password" autocomplete="new-password" minlength="8" maxlength="200" required /><p class="field-error" id="pw-err-password" hidden></p></div>
+                <div class="form-group"><label for="pw-new2">Neues Passwort wiederholen</label><input id="pw-new2" type="password" autocomplete="new-password" maxlength="200" required /><p class="field-error" id="pw-err-password2" hidden></p></div>
+                <div class="form-actions"><button type="submit" class="btn btn-sm" data-label="Passwort ändern">Passwort ändern</button></div>
+              </form>
+            </section>
+            <section class="konto-pane" id="pane-favoriten" aria-labelledby="h-fav" hidden>
+              <h2 id="h-fav">Favoriten</h2>
+              <p class="form-hint">Ihre gemerkten Stücke – mit dem Herz auf jeder Produktkarte hinzufügen oder entfernen.</p>
+              <div id="fav-list"><p class="form-hint">Favoriten werden geladen …</p></div>
+            </section>
+            <section class="konto-pane" id="pane-punkte" aria-labelledby="h-punkte" hidden>
+              <h2 id="h-punkte">Punkte sammeln</h2>
+              <p class="form-hint">Für jeden Euro Warenwert erhalten Sie 1 VELORA-Punkt – gutgeschrieben, sobald Ihre Zahlung eingegangen ist. 100 Punkte = 5 € Rabatt.</p>
+              <div class="form-msg" id="points-msg" role="status" aria-live="polite" hidden></div>
+              <div id="points-box"><p class="form-hint">Punkte werden geladen …</p></div>
+            </section>
+            <section class="konto-pane" id="pane-rechnungen" aria-labelledby="h-rechnungen" hidden>
+              <h2 id="h-rechnungen">Rechnungen</h2>
+              <p class="form-hint">Jede bezahlte Bestellung hat eine Rechnung – zum Ansehen, Drucken oder „Als PDF speichern“.</p>
+              <div id="invoice-list"><p class="form-hint">Rechnungen werden geladen …</p></div>
+            </section>
+            <section class="konto-pane orders-section" id="pane-bestellungen" aria-labelledby="orders-title" hidden>
+              <h2 id="orders-title">Bestellungen</h2>
+              <div class="form-msg" id="orders-msg" role="alert" aria-live="polite" hidden></div>
+              <div id="orders-list"><p class="form-hint">Bestellungen werden geladen …</p></div>
+              <div id="order-detail" hidden></div>
+            </section>
+            <section class="konto-pane" id="pane-lieferung" aria-labelledby="h-lieferung" hidden>
+              <h2 id="h-lieferung">Lieferung</h2>
+              <p class="form-hint">Lieferstatus Ihrer Bestellungen: bestellt → versandt → zugestellt, mit Sendungsnummer.</p>
+              <div id="delivery-list"><p class="form-hint">Lieferungen werden geladen …</p></div>
+            </section>
+            <section class="konto-pane" id="pane-rueckgabe" aria-labelledby="h-rueckgabe" hidden>
+              <h2 id="h-rueckgabe">Rückgabe</h2>
+              <p class="form-hint">Einzelne Artikel innerhalb der Rückgabefrist zurückgeben. Details: <a href="retouren.html">Retouren</a> · <a href="widerruf.html">Widerrufsbelehrung</a>.</p>
+              <div class="form-msg" id="returns-msg" role="status" aria-live="polite" hidden></div>
+              <div id="return-new"></div>
+              <h3>Meine Rückgaben</h3>
+              <div id="returns-list"><p class="form-hint">Rückgaben werden geladen …</p></div>
+            </section>
+          </div>
+        </div>
       </div>
       <p class="form-hint" id="konto-loading">Konto wird geladen …</p>
-
     </section>
   </main>
 
@@ -195,7 +270,9 @@
   <script src="js/auth.js?v=herbst22"></script>
   <script src="js/stock.js?v=herbst22"></script>
   <script src="js/site.js?v=herbst22"></script>
+  <script src="js/favorites.js?v=herbst22"></script>
   <script src="js/orders.js?v=herbst22"></script>
+  <script src="js/konto.js?v=herbst22"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
 </body>
 </html>

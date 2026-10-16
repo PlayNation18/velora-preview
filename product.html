@@ -181,6 +181,7 @@
   <script src="js/app.js?v=herbst22"></script>
   <script src="js/config.js?v=herbst22"></script>
   <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/favorites.js?v=herbst22"></script>
   <script src="js/stock.js?v=herbst22"></script>
   <script src="js/site.js?v=herbst22"></script>
   <script>
@@ -259,7 +260,7 @@
               ).join("")}
             </div>
             <p class="stock-note" id="stock-note" aria-live="polite"></p>
-            <button type="button" class="btn btn-magnetic" id="add-btn" data-label="In den Warenkorb">In den Warenkorb</button>
+            <div class="pdp-buy-row"><button type="button" class="btn btn-magnetic" id="add-btn" data-label="In den Warenkorb">In den Warenkorb</button><button type="button" class="fav-btn fav-btn-pdp" data-fav-id="${escapeHtml(product.id)}" data-fav-color="${selectedColor ? escapeHtml(selectedColor.id) : ""}" aria-pressed="false" aria-label="Zu Favoriten hinzufügen"></button></div>
             <p class="pdp-note">${product.type === "gutschein" ? "Digitaler Gutschein per E-Mail (Demo) · kein Versand · " : ""}Demo-Artikel · ${product.sizeUnit ? "Länge 80–120 cm" : product.sizes && product.sizes.length === 1 ? "Einheitsgröße" : escapeHtml(sizeHint(product))} · Keine echte Lagerverwaltung</p>
             ${product.matches && product.matches.length ? `<div class="pdp-match"><p class="size-label">Passend dazu</p><ul class="pdp-match-list">${product.matches.map((mid) => { const mp = getProductById(mid); return mp ? `<li><a href="product.html?id=${encodeURIComponent(mp.id)}">${escapeHtml(mp.name)}</a> <span>${formatPrice(lowestPrice(mp))}</span></li>` : ""; }).join("")}</ul></div>` : ""}
             <p class="pdp-philosophie">Unsere Philosophie: edel statt laut — Gold nur als Akzent. <a href="index.html#philosophie">Mehr erfahren</a></p>
@@ -299,6 +300,7 @@
         btn.addEventListener("click", () => {
           const cid = btn.dataset.colorId;
           selectedColor = product.colors.find((c) => c.id === cid) || selectedColor;
+          { const fb = root.querySelector(".fav-btn-pdp"); if (fb && selectedColor) fb.setAttribute("data-fav-color", selectedColor.id); }
           swatches.forEach((s) => {
             const on = s === btn;
             s.classList.toggle("is-active", on);

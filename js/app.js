@@ -56,6 +56,7 @@ function productCardHtml(product, index = 0) {
     <a class="product-card reveal" href="product.html?id=${encodeURIComponent(product.id)}${w}"
        style="--reveal-delay:${Math.min(index, 12) * 60}ms">
       ${productImageHtml(product)}
+      <button type="button" class="fav-btn" data-fav-id="${escapeHtml(product.id)}" aria-pressed="false" aria-label="Zu Favoriten hinzufügen"></button>
       <div class="product-card-body">
         <p class="product-cat">${escapeHtml(typeLabel)}${badge}</p>
         <h3>${escapeHtml(product.name)}</h3>

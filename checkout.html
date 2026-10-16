@@ -172,6 +172,7 @@
   <script src="js/app.js?v=herbst22"></script>
   <script src="js/config.js?v=herbst22"></script>
   <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/favorites.js?v=herbst22"></script>
   <script src="js/stock.js?v=herbst22"></script>
   <script src="js/site.js?v=herbst22"></script>
   <script>
@@ -254,6 +255,7 @@
                 <div class="checkout-code"><input id="code-input" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="30" placeholder="Code eingeben" value="${escapeHtml(saved)}" aria-label="Rabattcode" /><button type="button" class="btn btn-outline" id="code-apply">Einlösen</button></div>
                 <p class="cart-code-msg" id="code-msg" role="status" aria-live="polite" hidden></p>
               </div>
+              <div class="checkout-points" id="checkout-points" hidden></div>
               <div class="demo-pay-note">${payNote}</div>
               <div class="form-group check-group checkout-accept">
                 <label class="check-label" for="accept"><input id="accept" name="accept" type="checkbox" required /> <span>Ich habe die <a href="agb.html" target="_blank" rel="noopener">AGB</a>, die <a href="widerruf.html" target="_blank" rel="noopener">Widerrufsbelehrung</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und akzeptiere sie.</span></label>
@@ -270,6 +272,28 @@
           document.getElementById("vorname").value = me.firstName || "";
           document.getElementById("nachname").value = me.lastName || "";
           document.getElementById("email").value = me.email || "";
+          /* Kundenkonto: Standard-Adresse vorausfüllen, Treuepunkte an der Kasse einlösen */
+          window.VeloraAuth.api("/account").then((r) => {
+            const d = r.data; if (!d || !d.ok) return;
+            const a = (d.addresses || []).find((x) => x.isDefault) || (d.addresses || [])[0];
+            const set = (id, v) => { const el = document.getElementById(id); if (el && !el.value && v) el.value = v; };
+            if (a) { set("vorname", a.firstName); set("nachname", a.lastName); set("strasse", a.street); set("plz", a.zip); set("ort", a.city); set("telefon", a.phone); const l = document.getElementById("land"); if (l && a.country) l.value = a.country; }
+            set("telefon", d.profile && d.profile.phone);
+            const pb = document.getElementById("checkout-points"), bal = d.points.balance, step = d.points.step, sc = d.points.stepCents;
+            if (!pb) return;
+            pb.hidden = false;
+            if (bal < step) { pb.innerHTML = `<strong>${bal} VELORA-Punkte</strong> · noch ${step - bal} Punkte bis zu Ihrem ersten 5-€-Gutschein. Mit dieser Bestellung sammeln Sie weitere Punkte.`; return; }
+            const n = Math.min(Math.floor(bal / step), 20);
+            pb.innerHTML = `<strong>${bal} VELORA-Punkte</strong> verfügbar – jetzt einlösen:<div class="points-redeem"><select id="pts-amount" aria-label="Punkte einlösen">${Array.from({ length: n }, (_, i) => `<option value="${(i + 1) * step}">${(i + 1) * step} Punkte → ${cents((i + 1) * sc)}</option>`).join("")}</select><button type="button" class="btn btn-outline" id="pts-redeem">Punkte einlösen</button></div>`;
+            document.getElementById("pts-redeem").addEventListener("click", async (ev) => {
+              const b = ev.currentTarget; b.disabled = true;
+              try {
+                const r2 = await window.VeloraAuth.api("/account/points/redeem", "POST", { points: Number(document.getElementById("pts-amount").value) });
+                if (r2.data && r2.data.ok) { document.getElementById("code-input").value = r2.data.code; pb.innerHTML = `Gutscheincode <strong>${escapeHtml(r2.data.code)}</strong> über ${cents(r2.data.cents)} erstellt und eingetragen. Restguthaben: ${r2.data.balance} Punkte.`; quote(); }
+                else { b.disabled = false; pb.insertAdjacentHTML("beforeend", `<p class="field-error">${escapeHtml((r2.data && r2.data.error) || "Einlösen nicht möglich.")}</p>`); }
+              } catch (_) { b.disabled = false; }
+            });
+          }, () => {});
         }
         const $ = (id) => document.getElementById(id);
         const showMsg = (t) => { const m = $("form-msg"); m.textContent = t; m.hidden = !t; if (t) m.scrollIntoView({ block: "nearest", behavior: "smooth" }); };

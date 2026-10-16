@@ -9,7 +9,7 @@
   var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
   var eur = function (c) { return (c / 100).toLocaleString("de-AT", { style: "currency", currency: "EUR" }); };
   var dt = function (iso) { try { return new Date(iso).toLocaleString("de-AT", { dateStyle: "short", timeStyle: "short" }); } catch (_) { return iso || ""; } };
-  var STATUS = { neu: "Neu", bezahlt: "Bezahlt", versendet: "Versendet", storniert: "Storniert", retoure_angefragt: "Retoure angefragt", retourniert: "Retourniert" };
+  var STATUS = { neu: "Neu", bezahlt: "Bezahlt", versendet: "Versendet", zugestellt: "Zugestellt", storniert: "Storniert", retoure_angefragt: "Retoure angefragt", retourniert: "Retourniert" };
 
   function call(path, method, body) {
     var o = { method: method || "GET", credentials: "same-origin", cache: "no-store", headers: {} };
@@ -52,7 +52,7 @@
       tabs.forEach(function (b) { b.setAttribute("aria-selected", String(b.getAttribute("data-tab") === name)); });
       $$(".admin-pane").forEach(function (p) { p.hidden = p.id !== "pane-" + name; });
       flash("");
-      ({ orders: loadOrders, stock: loadStock, discounts: loadDiscounts, newsletter: loadNewsletter, contacts: loadContacts })[name]();
+      ({ orders: loadOrders, returns: loadReturns, stock: loadStock, discounts: loadDiscounts, newsletter: loadNewsletter, contacts: loadContacts })[name]();
     }
     select("orders");
   }
@@ -86,11 +86,18 @@
         "<p><strong>" + esc(c.firstName) + " " + esc(c.lastName) + "</strong> · " + esc(c.email) + (c.phone ? " · " + esc(c.phone) : "") + "<br>" + esc(c.street) + ", " + esc(c.zip) + " " + esc(c.city) + ", " + esc(c.country) + "</p>" +
         (o.returnRequest ? '<p class="form-msg is-error">' + (o.returnRequest.kind === "widerruf" ? "Widerruf" : "Retoure") + " angefragt am " + esc(dt(o.returnRequest.at)) + (o.returnRequest.reason ? ": " + esc(o.returnRequest.reason) : "") + "</p>" : "") +
         '<h3>Status ändern</h3><div class="admin-grid"><label>Status<select id="d-status">' + opts + '</select></label><label>Notiz<input id="d-note" maxlength="300" /></label><label><span>Bestand zurückbuchen (bei „Retourniert“)</span><input id="d-restock" type="checkbox" /></label></div><button class="btn btn-sm" id="d-status-btn">Status setzen</button> <span class="admin-note">„Storniert“ bucht den Bestand automatisch zurück. Erstattungen führen Sie im Zahlungsdienst (Stripe) manuell aus.</span>' +
-        '<h3>Versand &amp; Versandmail</h3><div class="admin-grid"><label>Versanddienstleister<input id="d-carrier" maxlength="60" value="' + esc(s.carrier || "") + '" placeholder="z. B. Post AT" /></label><label>Sendungsnummer<input id="d-track" maxlength="80" value="' + esc(s.tracking || "") + '" /></label><label>Tracking-Link (https)<input id="d-url" maxlength="300" value="' + esc(s.url || "") + '" placeholder="https://…" /></label></div><button class="btn btn-sm" id="d-ship-btn">' + (o.status === "versendet" ? "Versandmail erneut senden" : "Als versendet markieren + Versandmail senden") + "</button>" +
+        '<h3>Versand &amp; Versandmail</h3><div class="admin-grid"><label>Versanddienstleister<input id="d-carrier" maxlength="60" value="' + esc(s.carrier || "") + '" placeholder="z. B. Post AT" /></label><label>Sendungsnummer<input id="d-track" maxlength="80" value="' + esc(s.tracking || "") + '" /></label><label>Tracking-Link (https)<input id="d-url" maxlength="300" value="' + esc(s.url || "") + '" placeholder="https://…" /></label></div><button class="btn btn-sm" id="d-ship-btn">' + (o.status === "versendet" || o.status === "zugestellt" ? "Versanddaten speichern + Versandmail erneut senden" : "Als versendet markieren + Versandmail senden") + "</button>" +
+        (o.status === "versendet" ? ' <button class="btn btn-outline btn-sm" id="d-delivered-btn">Als zugestellt markieren</button>' : "") +
+        '<p class="admin-note">Lieferstatus für den Kunden: ' + (s.deliveredAt ? "Zugestellt am " + esc(dt(s.deliveredAt)) : s.shippedAt ? "Versandt am " + esc(dt(s.shippedAt)) : "Bestellt") + (o.points ? " · Treuepunkte: " + o.points : "") + "</p>" +
+        (o.itemReturns && o.itemReturns.length ? "<h3>Rückgaben (Artikel)</h3><ul class=\"order-history\">" + o.itemReturns.map(function (x) { return "<li>" + esc(dt(x.createdAt)) + " · Pos. " + x.itemId + " × " + x.qty + " · " + esc(RREASON[x.reason] || x.reason) + (x.comment ? " – " + esc(x.comment) : "") + " · <strong>" + esc(RSTATUS[x.status] || x.status) + "</strong></li>"; }).join("") + "</ul><p class=\"admin-note\">Bearbeiten im Tab „Retouren“.</p>" : "") +
         '<h3>Verlauf</h3><ul class="order-history">' + o.history.map(function (h) { return "<li>" + esc(h.label) + " · " + esc(dt(h.at)) + " · " + esc(h.by) + (h.note ? " · " + esc(h.note) : "") + "</li>"; }).join("") + "</ul>";
       d.scrollIntoView({ block: "nearest", behavior: "smooth" });
       $("#d-status-btn").addEventListener("click", function () {
         call("/orders/" + encodeURIComponent(no) + "/status", "POST", { status: $("#d-status").value, note: $("#d-note").value, restock: $("#d-restock").checked }).then(function (r2) { if (r2.j.ok) { flash("Status gesetzt: " + r2.j.order.statusLabel); orderDetail(no); loadOrders(); } else err(r2); }, fail);
+      });
+      var dlv = $("#d-delivered-btn");
+      if (dlv) dlv.addEventListener("click", function () {
+        call("/orders/" + encodeURIComponent(no) + "/status", "POST", { status: "zugestellt", note: "Zustellung bestätigt" }).then(function (r2) { if (r2.j.ok) { flash("Als zugestellt markiert."); orderDetail(no); loadOrders(); } else err(r2); }, fail);
       });
       $("#d-ship-btn").addEventListener("click", function () {
         call("/orders/" + encodeURIComponent(no) + "/ship", "POST", { carrier: $("#d-carrier").value, tracking: $("#d-track").value, trackingUrl: $("#d-url").value, sendMail: true }).then(function (r2) {
@@ -178,6 +185,27 @@
       $("#n-body").innerHTML = r.j.subscribers.map(function (s) { return "<tr><td>" + esc(s.email) + "</td><td>" + esc(L[s.status] || s.status) + "</td><td>" + esc(dt(s.createdAt)) + "</td><td>" + esc(s.confirmedAt ? dt(s.confirmedAt) : "–") + "</td></tr>"; }).join("") || '<tr><td colspan="4">Keine Einträge.</td></tr>';
     }, fail);
   }
+  /* ---------- Retouren (je Artikel) ---------- */
+  var RREASON = { passt_nicht: "Passt nicht (Größe)", gefaellt_nicht: "Gefällt nicht", defekt: "Beschädigt/fehlerhaft", falsch: "Falscher Artikel", anders: "Sieht anders aus", sonstiges: "Sonstiges" };
+  var RSTATUS = { angefragt: "Angefragt", genehmigt: "Genehmigt", abgelehnt: "Abgelehnt", eingegangen: "Ware eingegangen", erstattet: "Erstattet" };
+  function loadReturns() {
+    call("/returns?status=" + encodeURIComponent($("#r-status").value)).then(function (r) {
+      if (!r.j.ok) return err(r);
+      $("#r-body").innerHTML = r.j.returns.map(function (x) {
+        var opts = Object.keys(RSTATUS).map(function (k) { return '<option value="' + k + '"' + (k === x.status ? " selected" : "") + ">" + RSTATUS[k] + "</option>"; }).join("");
+        return "<tr><td>" + esc(dt(x.createdAt)) + '</td><td><a href="#" data-r-order="' + esc(x.orderNo) + '">' + esc(x.orderNo) + "</a><br><small>" + esc(x.email || "") + "</small></td><td>" + esc(x.name || "Pos. " + x.itemId) + " × " + x.qty + "</td><td>" + esc(RREASON[x.reason] || x.reason) + (x.comment ? "<br><small>" + esc(x.comment) + "</small>" : "") + '</td><td><span class="status-badge">' + esc(RSTATUS[x.status] || x.status) + "</span>" + (x.adminNote ? "<br><small>" + esc(x.adminNote) + "</small>" : "") + '</td><td><select data-r-status="' + esc(x.id) + '">' + opts + '</select><input data-r-note="' + esc(x.id) + '" maxlength="300" placeholder="Notiz für Kunde" value="' + esc(x.adminNote || "") + '" /><button class="btn btn-sm" data-r-save="' + esc(x.id) + '">Speichern</button></td></tr>';
+      }).join("") || '<tr><td colspan="6">Keine Retouren.</td></tr>';
+    }, fail);
+  }
+  $("#r-filter").addEventListener("submit", function (e) { e.preventDefault(); loadReturns(); });
+  $("#r-body").addEventListener("click", function (e) {
+    var a = e.target.closest("[data-r-order]");
+    if (a) { e.preventDefault(); $$("#admin-tabs button")[0].click(); orderDetail(a.getAttribute("data-r-order")); return; }
+    var b = e.target.closest("[data-r-save]"); if (!b) return;
+    var id = b.getAttribute("data-r-save");
+    call("/returns/" + id, "POST", { status: $('[data-r-status="' + id + '"]').value, note: $('[data-r-note="' + id + '"]').value }).then(function (r) { if (r.j.ok) { flash("Retoure aktualisiert: " + RSTATUS[r.j.ret.status]); loadReturns(); } else err(r); }, fail);
+  });
+
   function loadContacts() {
     call("/contacts").then(function (r) {
       if (!r.j.ok) return err(r);

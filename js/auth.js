@@ -59,7 +59,7 @@
       if (loggedIn) {
         var m = document.createElement("div"); m.className = "account-menu"; m.id = "account-menu"; m.hidden = true;
         m.innerHTML = (name ? '<p class="account-hello">Hallo, ' + esc(name) + "</p>" : "") +
-          '<a href="konto.html">Mein Konto</a><button type="button" id="account-logout">Abmelden</button>';
+          '<a href="konto.html">Mein Konto</a><a href="konto.html?bereich=favoriten">Favoriten</a><a href="konto.html?bereich=bestellungen">Bestellungen</a><a href="konto.html?bereich=punkte">Punkte</a><button type="button" id="account-logout">Abmelden</button>';
         wrap.appendChild(m);
         $("#account-logout", m).addEventListener("click", doLogoutAndGo);
       }

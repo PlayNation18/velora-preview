@@ -127,15 +127,21 @@
       <div class="admin-tabs" id="admin-tabs" role="tablist">
         <button type="button" role="tab" data-tab="orders" aria-selected="true">Bestellungen</button>
         <button type="button" role="tab" data-tab="stock" aria-selected="false">Bestände</button>
+        <button type="button" role="tab" data-tab="returns" aria-selected="false">Retouren</button>
         <button type="button" role="tab" data-tab="discounts" aria-selected="false">Rabattcodes</button>
         <button type="button" role="tab" data-tab="newsletter" aria-selected="false">Newsletter</button>
         <button type="button" role="tab" data-tab="contacts" aria-selected="false">Kontakt</button>
       </div>
 
       <section class="admin-pane" id="pane-orders">
-        <form class="admin-tools" id="o-filter"><select id="o-status" aria-label="Status"><option value="">Alle Status</option><option value="neu">Neu</option><option value="bezahlt">Bezahlt</option><option value="versendet">Versendet</option><option value="storniert">Storniert</option><option value="retoure_angefragt">Retoure angefragt</option><option value="retourniert">Retourniert</option></select><input id="o-q" type="search" placeholder="Nummer, Name, E-Mail" aria-label="Suche" /><button class="btn btn-sm" type="submit">Filtern</button><button class="btn btn-outline btn-sm" type="button" id="o-csv">CSV-Export</button><span class="admin-note" id="o-count"></span></form>
+        <form class="admin-tools" id="o-filter"><select id="o-status" aria-label="Status"><option value="">Alle Status</option><option value="neu">Neu</option><option value="bezahlt">Bezahlt</option><option value="versendet">Versendet</option><option value="zugestellt">Zugestellt</option><option value="storniert">Storniert</option><option value="retoure_angefragt">Retoure angefragt</option><option value="retourniert">Retourniert</option></select><input id="o-q" type="search" placeholder="Nummer, Name, E-Mail" aria-label="Suche" /><button class="btn btn-sm" type="submit">Filtern</button><button class="btn btn-outline btn-sm" type="button" id="o-csv">CSV-Export</button><span class="admin-note" id="o-count"></span></form>
         <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>Nr.</th><th>Datum</th><th>Status</th><th>Kunde</th><th>Summe</th><th>Zahlung</th></tr></thead><tbody id="o-body"></tbody></table></div>
         <div class="admin-detail" id="o-detail" hidden></div>
+      </section>
+
+      <section class="admin-pane" id="pane-returns" hidden>
+        <form class="admin-tools" id="r-filter"><select id="r-status" aria-label="Retouren-Status"><option value="">Alle Retouren</option><option value="angefragt">Angefragt</option><option value="genehmigt">Genehmigt</option><option value="abgelehnt">Abgelehnt</option><option value="eingegangen">Ware eingegangen</option><option value="erstattet">Erstattet</option></select><button class="btn btn-sm" type="submit">Filtern</button><span class="admin-note">Rückgaben je Artikel aus dem Kundenkonto. Erstattungen führen Sie im Zahlungsdienst manuell aus.</span></form>
+        <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>Datum</th><th>Bestellung</th><th>Artikel</th><th>Grund</th><th>Status</th><th>Aktion</th></tr></thead><tbody id="r-body"></tbody></table></div>
       </section>
 
       <section class="admin-pane" id="pane-stock" hidden>
