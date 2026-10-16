@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VELORA — Cinematic Boutique</title>
+  <meta name="description" content="VELORA Demo-Boutique — Strick, Mäntel, Jacken, Hosen, Kleider, Schuhe, Loungewear, Taschen, Bademode, Accessoires — 184 Styles, Casual Luxury. Beispielkatalog. Keine echten Bestellungen." />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/runway-poster.jpg"
+    >
+      <source src="video/runway.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Shop</strong> — Beispielkatalog · keine echten Zahlungen</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html" class="is-active">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <form class="header-search" id="header-search" role="search">
+          <input type="search" name="q" placeholder="Suchen…" aria-label="Produkte suchen" />
+          <button type="submit" aria-label="Suche">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-cinematic" aria-label="Hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Austria · Kollektion 2026</p>
+        <h1>Licht.<br><em>Form.</em><br>Verlangen.</h1>
+        <p>Erste Kollektion: Ripp Polo, Satin und Mesh, ein Bodysuit. Gold auf Schwarz — Demo-Shop.</p>
+        <div class="hero-actions">
+          <a class="btn btn-magnetic" href="shop.html">Kollektion entdecken</a>
+          <a class="btn btn-outline btn-magnetic" href="shop.html?main=damen&amp;cat=kleider">Kleider</a>
+          <a class="btn btn-outline btn-magnetic" href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="cat-strip world-tiles">
+      <a class="cat-tile world-tile world-damen" href="shop.html?main=damen">
+        <p class="tile-count">130 Styles</p>
+        <h3>Damen</h3>
+        <p>Kleider · Strick · Hosen · Bademode · Dessous</p>
+      </a>
+      <a class="cat-tile world-tile world-herren" href="shop.html?main=herren">
+        <p class="tile-count">64 Styles</p>
+        <h3>Herren</h3>
+        <p>Polos · Hosen · Jacken · Bademode · Unterwäsche</p>
+      </a>
+    </div>
+    <div class="cat-strip cat-strip-extra">
+      <div class="cat-tile cat-tile-extra">
+        <h3>Bademode</h3>
+        <p>Bikinis · Badehosen</p>
+        <span class="nav-pair"><a href="shop.html?main=damen&amp;cat=bademode">Damen</a><a href="shop.html?main=herren&amp;cat=bademode">Herren</a></span>
+      </div>
+      <div class="cat-tile cat-tile-extra">
+        <h3>Geschenke</h3>
+        <p>Bis 100 € · Gutschein</p>
+        <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+      </div>
+      <div class="cat-tile cat-tile-extra">
+        <h3>Sale</h3>
+        <p>Demo-Preise · bis −20 %</p>
+        <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+      </div>
+    </div>
+    <nav class="cat-chips" aria-label="Schnellauswahl Damen"><span class="chips-label">Damen</span><a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a><a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a><a href="shop.html?main=damen&amp;cat=strick">Strick</a><a href="shop.html?main=damen&amp;cat=hosen">Hosen</a><a href="shop.html?main=damen&amp;cat=jacken">Jacken</a><a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a><a href="shop.html?main=damen&amp;cat=westen">Westen</a><a href="shop.html?main=damen&amp;cat=sets">Sets</a><a href="shop.html?main=damen&amp;cat=sport">Sport</a><a href="shop.html?main=damen&amp;cat=bademode">Bademode</a><a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a><a href="shop.html?main=damen&amp;cat=taschen">Taschen</a><a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a><a href="shop.html?main=damen&amp;cat=socken">Socken</a><a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a><a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a></nav>
+    <nav class="cat-chips" aria-label="Schnellauswahl Herren"><span class="chips-label">Herren</span><a href="shop.html?main=herren&amp;cat=polos">Polos</a><a href="shop.html?main=herren&amp;cat=strick">Strick</a><a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a><a href="shop.html?main=herren&amp;cat=hosen">Hosen</a><a href="shop.html?main=herren&amp;cat=jacken">Jacken</a><a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a><a href="shop.html?main=herren&amp;cat=westen">Westen</a><a href="shop.html?main=herren&amp;cat=sets">Sets</a><a href="shop.html?main=herren&amp;cat=bademode">Bademode</a><a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a><a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a><a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a><a href="shop.html?main=herren&amp;cat=taschen">Taschen</a><a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a><a href="shop.html?main=herren&amp;cat=socken">Socken</a><a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a></nav>
+
+    <section class="herbst-band">
+      <a class="lookbook-tile" href="lookbook.html">
+        <div class="lookbook-copy">
+          <p class="eyebrow">Neu · Lookbook</p>
+          <h3>Sechs Looks</h3>
+          <p>Sport Noir, Weiß &amp; Gold, Burgund — und drei Herren-Looks mit Goldzip-Polo, Slim-Hose und Chunky Loafer. Alle Teile verlinkt, der ganze Look mit einem Klick im Warenkorb.</p>
+          <span class="btn btn-outline">Lookbook ansehen</span>
+        </div>
+        <img src="img/neu/lookbook/l01-look-sport.jpg?v=herbst22" alt="Look Sport Noir" loading="lazy" decoding="async" width="1000" height="563" />
+      </a>
+    </section>
+
+    <section class="herbst-band">
+      <a class="herbst-tile" href="shop.html?f=herbst">
+        <div class="herbst-copy">
+          <p class="eyebrow">Neu · Herbst 2026</p>
+          <h3>Die Herbst-Kollektion</h3>
+          <p>164 Styles für Damen und Herren: Strick und Cashmere-Hoodies, Wollmäntel, Satin und Wildlederoptik, Hosen (auch Schlag-Leggings), Westen, Sets, Sport-Set, Loafer, Pumps, Peep-Toes, Sneaker, Boxershorts, Satin-Pyjama, Socken, Loungewear, Sonnenbrillen, Business-Tasche — dazu Parka, Trenchcoat, Bomber, Cargo, Gürtel und Taschen. Warme Töne, gebürstetes Gold, Casual Luxury. Größen XS–XXL.</p>
+          <span class="btn btn-outline">Herbst entdecken</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="dual-band">
+      <a class="dual-tile men" href="shop.html?main=herren&amp;cat=polos">
+        <div class="dual-copy">
+          <p class="eyebrow">Herren</p>
+          <h3>Ripp Polo</h3>
+          <p>Offener Kragen, Goldkante, sechs Farben. Kein Knopf, keine Placket.</p>
+          <span class="btn btn-outline">Polos ansehen</span>
+        </div>
+      </a>
+      <a class="dual-tile women" href="shop.html?main=damen&amp;cat=kleider">
+        <div class="dual-copy">
+          <p class="eyebrow">Damen</p>
+          <h3>Atelier Kleider</h3>
+          <p>Mesh, Cowl, Wickel, Satin — Goldakzente, eigene Schnitte.</p>
+          <span class="btn btn-outline">Kleider ansehen</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section wrap philosophie" id="philosophie" aria-labelledby="philosophie-title">
+      <div class="section-head">
+        <h2 id="philosophie-title">Unsere Philosophie</h2>
+      </div>
+      <p class="philosophie-lead">Wir glauben an Kleidung, die ruhig auftritt und lange gefällt — mit einem Hauch Gold als Signatur.</p>
+      <ol class="philosophie-list">
+        <li><h3>Edel statt laut</h3><p>Klare Linien, ruhige Farben. Gold setzen wir nur als Akzent.</p></li>
+        <li><h3>Schmeichelnde Schnitte</h3><p>Für jede Figur gedacht, mit Größen bis XXL.</p></li>
+        <li><h3>Qualität vor Menge</h3><p>Ausgewählte Stoffe, saubere Verarbeitung, kleine Serien.</p></li>
+        <li><h3>Komfort, der elegant aussieht</h3><p>Von Loungewear bis Abendgarderobe.</p></li>
+      </ol>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head">
+        <h2>Ausgewählte Looks</h2>
+        <a class="link-more" href="shop.html">Alle ansehen</a>
+      </div>
+      <div class="product-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="editorial">
+      <blockquote>„Weniger Lautstärke. Mehr Haltung. Mehr Glanz.“</blockquote>
+      <cite>VELORA Atelier · Wien</cite>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid footer-grid-cats">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">Velora</a>
+        <p>Cinematic Demo-Boutique für Polos, Kleider und Casual Luxury. Keine echten Bestellungen oder Zahlungen.</p>
+      </div>
+      <div class="footer-col">
+        <h4><a href="shop.html?main=damen">Damen</a></h4>
+        <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+        <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+        <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+        <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+        <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+        <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+        <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+        <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+        <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+        <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+        <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+        <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+        <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+        <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+        <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+        <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+      </div>
+      <div class="footer-col">
+        <h4><a href="shop.html?main=herren">Herren</a></h4>
+        <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+        <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+        <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+        <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+        <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+        <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+        <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+        <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+        <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+        <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+        <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+        <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+        <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+        <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+        <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+        <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mehr</h4>
+        <a href="shop.html?f=geschenke">Geschenke</a> <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">D</a><a href="shop.html?main=herren&amp;f=geschenke">H</a></span>
+        <a href="shop.html?f=sale">Sale (Demo)</a> <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">D</a><a href="shop.html?main=herren&amp;f=sale">H</a></span>
+        <a href="shop.html?f=herbst">Herbst-Kollektion</a> <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">D</a><a href="shop.html?main=herren&amp;f=herbst">H</a></span>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+        <a href="checkout.html">Zur Kasse (Demo)</a>
+        <a href="README.md">README</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 VELORA Demo</span>
+      <span>Beispielkatalog · MwSt. nur demonstrativ</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis) · Versandkosten werden an der Demo-Kasse angezeigt</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+  <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const feat = VELORA_PRODUCTS.filter((p) => p.featured);
+      /* Neue Herbst-5-Styles (d01–h40) zuerst, dann die bisherigen Herbst-Highlights */
+      const isNew = (p) => /^[dh]\d\d$/.test(p.id);
+      const isHerbstOld = (p) => ["jacke", "tasche", "weste", "hose", "guertel"].includes(p.type);
+      const featured = [...feat.filter(isNew), ...feat.filter((p) => !isNew(p) && isHerbstOld(p)).reverse(), ...feat.filter((p) => !isNew(p) && !isHerbstOld(p))].slice(0, 12);
+      renderProductGrid(document.getElementById("featured-grid"), featured);
+    });
+  </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>

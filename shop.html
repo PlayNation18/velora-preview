@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — VELORA</title>
+  <meta name="description" content="VELORA Shop — erste Eigenmarke: Polo, Kleider, Bodysuit. Demo-Katalog." />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Shop</strong> — Beispielkatalog · keine echten Zahlungen</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <form class="header-search" id="header-search" role="search">
+          <input type="search" name="q" placeholder="Suchen…" aria-label="Produkte suchen" />
+          <button type="submit" aria-label="Suche">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="shop-strip-banner">
+    <div class="strip-copy">
+      <h2>Shop die Haltung</h2>
+      <p>Damen · Herren — getrennt nach Welten · Geschenke · Sale als Zusatzfilter</p>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="shop-hero">
+      <p class="eyebrow">Kollektion</p>
+      <h1 id="shop-title">Alle Produkte</h1>
+      <p>Erste Kollektion + Herbst 2026 · 184 Styles · Größen XS–XXL (Bikinis XS–XL, Schuhe EU-Größen) · Preise in EUR</p>
+    </div>
+
+    <div class="shop-toolbar">
+      <div class="filter-stack">
+        <div class="filter-pills filter-pills-main" id="main-pills" role="group" aria-label="Damen oder Herren wählen"></div>
+        <div class="filter-pills filter-pills-sub" id="sub-pills" role="group" aria-label="Unterkategorie wählen"></div>
+        <div class="filter-pills filter-pills-extra" id="extra-pills" role="group" aria-label="Zusatzfilter Geschenke, Sale, Herbst"></div>
+      </div>
+      <form class="shop-search" id="shop-search" role="search">
+        <input type="search" name="q" id="shop-q" placeholder="Suche nach Name oder Material…" aria-label="Im Shop suchen" />
+      </form>
+    </div>
+    <p class="shop-count" id="shop-count"></p>
+    <p class="shop-note" id="shop-note" hidden></p>
+    <div class="product-grid" id="shop-grid" style="padding-bottom:4rem;"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid footer-grid-cats">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">Velora</a>
+        <p>Demo-Boutique — keine echten Bestellungen.</p>
+      </div>
+      <div class="footer-col">
+        <h4><a href="shop.html?main=damen">Damen</a></h4>
+        <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+        <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+        <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+        <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+        <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+        <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+        <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+        <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+        <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+        <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+        <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+        <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+        <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+        <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+        <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+        <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+      </div>
+      <div class="footer-col">
+        <h4><a href="shop.html?main=herren">Herren</a></h4>
+        <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+        <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+        <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+        <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+        <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+        <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+        <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+        <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+        <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+        <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+        <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+        <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+        <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+        <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+        <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+        <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mehr</h4>
+        <a href="shop.html?f=geschenke">Geschenke</a> <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">D</a><a href="shop.html?main=herren&amp;f=geschenke">H</a></span>
+        <a href="shop.html?f=sale">Sale (Demo)</a> <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">D</a><a href="shop.html?main=herren&amp;f=sale">H</a></span>
+        <a href="shop.html?f=herbst">Herbst-Kollektion</a> <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">D</a><a href="shop.html?main=herren&amp;f=herbst">H</a></span>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+        <a href="checkout.html">Zur Kasse (Demo)</a>
+        <a href="README.md">README</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 VELORA Demo</span>
+      <span>Beispielkatalog</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+  <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+  <script>
+    (function () {
+      /* Zustand: Welt (main = damen | herren | alle), Unterkategorie (cat), Zusatzfilter (f = geschenke | sale | herbst), Suche (q).
+         Kanonisch:  shop.html?main=damen&cat=schuhe&f=sale
+         Alte Links bleiben gültig:
+           ?cat=herren|damen              → Welt              ?cat=hosen            → Unterkategorie über beide Welten
+           ?cat=geschenke|sale|herbst     → Zusatzfilter      ?main=geschenke|sale  → Zusatzfilter (beide Welten, Damen/Herren-Pill wählbar)
+           ?g=herren|damen                → Welt              ?cat=hosen&g=herren   → Herren › Hosen
+           ?main=accessoires-schuhe | lounge-dessous → Gruppen-Filter über beide Welten (Damen/Herren-Pill wählbar)  */
+      let world = "alle", sub = "alle", extra = "alle", grp = "", currentQ = getQueryParam("q") || "";
+      const absorb = (v) => {
+        if (!v) return;
+        if (WORLDS.includes(v)) { if (world === "alle") world = v; }
+        else if (COLLECTION_TABS.includes(v)) { if (extra === "alle") extra = v; }
+        else if (LEGACY_GROUPS.some((x) => x.id === v)) grp = v;
+        else if (TAB_ORDER.includes(v)) sub = v;
+      };
+      absorb(getQueryParam("main")); absorb(getQueryParam("cat")); absorb(getQueryParam("f")); absorb(getQueryParam("grp"));
+      const g0 = getQueryParam("g");
+      if (WORLDS.includes(g0) && world === "alle") world = g0;
+
+      const mainBox = document.getElementById("main-pills");
+      const subBox = document.getElementById("sub-pills");
+      const extraBox = document.getElementById("extra-pills");
+      const titleEl = document.getElementById("shop-title");
+      const grid = document.getElementById("shop-grid");
+      const countEl = document.getElementById("shop-count");
+      const noteEl = document.getElementById("shop-note");
+      const qInput = document.getElementById("shop-q");
+
+      const WORLD_LABEL = { alle: "Alle", damen: "Damen", herren: "Herren" };
+      const EXTRA_LABEL = { alle: "Alle Artikel", geschenke: "Geschenke", sale: "Sale (Demo)", herbst: "Herbst-Kollektion" };
+      const notes = {
+        geschenke: "Geschenke bis 100 € – diese Auswahl entsteht automatisch aus den aktuellen Preisen. Dazu: der digitale VELORA Geschenkgutschein (25 / 50 / 100 / 200 €, Unisex).",
+        sale: "DEMO-SALE: Die Sale-Preise (15–20 % auf ausgewählte Saison-Artikel) sind Beispielwerte zur Veranschaulichung – keine echten Rabatte, keine echte Ware."
+      };
+      const count = (o) => filterProducts({ world: o.world, collection: o.extra, main: grp || undefined, category: o.sub, query: currentQ }).length;
+      const cur = () => ({ world, extra, sub });
+
+      function pill(attr, value, label, n, active, extraClass) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "filter-pill" + (active ? " is-active" : "") + (extraClass ? " " + extraClass : "");
+        b.dataset[attr] = value;
+        b.setAttribute("aria-pressed", active ? "true" : "false");
+        b.textContent = label + " (" + n + ")";
+        if (n === 0 && !active) b.classList.add("is-empty");
+        return b;
+      }
+
+      function buildPills() {
+        mainBox.innerHTML = "";
+        ["alle", "damen", "herren"].forEach((w) => {
+          mainBox.appendChild(pill("world", w, w === "alle" ? "Alle" : WORLD_LABEL[w], count({ world: w, extra, sub }), world === w, w === "alle" ? "" : "filter-pill-world"));
+        });
+        /* Unterkategorien der gewählten Welt (nur nicht-leere); bei Gruppen-Filter nur dessen Unterkategorien */
+        subBox.innerHTML = "";
+        const base = grp ? mainSubs(grp) : world === "alle" ? TAB_ORDER : mainSubs(world);
+        const subs = base.filter((s) => s === sub || count({ world, extra, sub: s }) > 0);
+        const label = grp ? CATEGORY_LABELS[grp] : world === "alle" ? "Kategorien" : WORLD_LABEL[world];
+        subBox.hidden = subs.length < 2 && sub === "alle";
+        if (!subBox.hidden) {
+          subBox.appendChild(pill("cat", "alle", "Alle " + label, count({ world, extra, sub: "alle" }), sub === "alle", "filter-pill-all"));
+          subs.forEach((s) => subBox.appendChild(pill("cat", s, CATEGORY_LABELS[s], count({ world, extra, sub: s }), sub === s)));
+        }
+        extraBox.innerHTML = "";
+        const lab = document.createElement("span"); lab.className = "filter-label"; lab.textContent = "Filter"; extraBox.appendChild(lab);
+        ["alle", "geschenke", "sale", "herbst"].forEach((e) => extraBox.appendChild(pill("extra", e, EXTRA_LABEL[e], count({ world, extra: e, sub }), extra === e)));
+      }
+
+      function titleFor() {
+        const parts = [];
+        if (world !== "alle") parts.push(WORLD_LABEL[world]);
+        if (grp) parts.push(CATEGORY_LABELS[grp]);
+        if (sub !== "alle") parts.push(CATEGORY_LABELS[sub]);
+        if (extra !== "alle") parts.push(EXTRA_LABEL[extra]);
+        return parts.length ? parts.join(" · ") : "Alle Produkte";
+      }
+
+      /* Header-/Footer-Link „aktiv“, wenn er genau diese Auswahl öffnet */
+      function navActive(a) {
+        const href = a.getAttribute("href") || "";
+        if (!href.startsWith("shop.html")) return false;
+        const sp = new URLSearchParams(href.split("?")[1] || "");
+        let w = "alle", s = "alle", e = "alle";
+        [sp.get("main"), sp.get("cat"), sp.get("f")].forEach((v) => {
+          if (!v) return;
+          if (WORLDS.includes(v)) w = v; else if (COLLECTION_TABS.includes(v)) e = v; else if (TAB_ORDER.includes(v)) s = v;
+        });
+        return w === world && s === sub && e === extra && !grp;
+      }
+
+      function refresh(scrollActive) {
+        if (sub !== "alle" && count({ world, extra, sub }) === 0 && !grp && world !== "alle" && !mainSubs(world).includes(sub)) sub = "alle";
+        window.VELORA_WORLD = world;
+        window.VELORA_SHOW_GENDER = world === "alle";
+        titleEl.textContent = titleFor();
+        document.title = titleFor() + " — Shop — VELORA";
+        document.querySelectorAll("#site-nav a").forEach((a) => a.classList.toggle("is-active", navActive(a) || (a.getAttribute("href") === "shop.html" && world === "alle" && sub === "alle" && extra === "alle" && !grp)));
+        const dd = document.getElementById("nav-dropdown-toggle");
+        if (dd) dd.classList.toggle("is-active", !!document.querySelector("#nav-dropdown-menu a.is-active"));
+        if (qInput) qInput.value = currentQ;
+        buildPills();
+        const list = filterProducts({ world, collection: extra, main: grp || undefined, category: sub, query: currentQ });
+        renderProductGrid(grid, list);
+        countEl.textContent = list.length + " Artikel" + (world !== "alle" ? " in " + WORLD_LABEL[world] : "") + (currentQ ? " für „" + currentQ + "“" : "") + (world !== "alle" ? " (inkl. Unisex)" : "");
+        const note = notes[extra] || "";
+        noteEl.textContent = note;
+        noteEl.hidden = !note;
+        const params = new URLSearchParams();
+        if (world !== "alle") params.set("main", world);
+        if (grp) params.set("grp", grp);
+        if (sub !== "alle") params.set("cat", sub);
+        if (extra !== "alle") params.set("f", extra);
+        if (currentQ) params.set("q", currentQ);
+        const qs = params.toString();
+        history.replaceState(null, "", "shop.html" + (qs ? "?" + qs : ""));
+        if (scrollActive) document.querySelectorAll(".filter-pills .is-active").forEach((el) => el.scrollIntoView({ block: "nearest", inline: "center" }));
+      }
+
+      mainBox.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-world]");
+        if (!b) return;
+        world = b.dataset.world;
+        if (sub !== "alle" && count({ world, extra, sub }) === 0) sub = "alle"; /* Unterkategorie, die es in der anderen Welt nicht gibt, zurücksetzen */
+        refresh(true);
+      });
+      subBox.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-cat]");
+        if (!b) return;
+        sub = b.dataset.cat;
+        refresh(true);
+      });
+      extraBox.addEventListener("click", (e) => {
+        const b = e.target.closest("[data-extra]");
+        if (!b) return;
+        extra = b.dataset.extra;
+        refresh(false);
+      });
+      document.getElementById("shop-search")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        currentQ = qInput.value.trim();
+        refresh(false);
+      });
+      qInput?.addEventListener("input", () => {
+        currentQ = qInput.value.trim();
+        refresh(false);
+      });
+      document.addEventListener("DOMContentLoaded", () => refresh(true));
+      if (document.readyState !== "loading") refresh(true);
+    })();
+  </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin — VELORA</title>
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Admin</strong> — nur für den Shop-Betreiber</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap admin-wrap">
+    <div class="auth-panel" id="admin-login" hidden>
+      <p class="eyebrow">Admin</p>
+      <h1>Anmelden</h1>
+      <p class="form-msg is-error" id="login-msg" role="alert" hidden></p>
+      <form id="login-form" novalidate>
+        <div class="form-group"><label for="login-pw">Admin-Passwort</label><input id="login-pw" type="password" autocomplete="current-password" required /></div>
+        <button type="submit" class="btn btn-block">Anmelden</button>
+      </form>
+      <p class="admin-note" style="margin-top:1rem">Das Passwort wird nur auf dem Server (Umgebungsvariable ADMIN_PASSWORD) gespeichert.</p>
+    </div>
+    <div class="admin-panel" id="admin-dash" hidden>
+      <div class="admin-bar"><div><h1>Shop-Verwaltung</h1><p class="admin-note" id="admin-info"></p></div><button type="button" class="btn btn-outline btn-sm" id="admin-logout">Abmelden</button></div>
+      <div class="form-msg" id="admin-msg" role="status" aria-live="polite" hidden></div>
+      <div class="admin-tabs" id="admin-tabs" role="tablist">
+        <button type="button" role="tab" data-tab="orders" aria-selected="true">Bestellungen</button>
+        <button type="button" role="tab" data-tab="stock" aria-selected="false">Bestände</button>
+        <button type="button" role="tab" data-tab="discounts" aria-selected="false">Rabattcodes</button>
+        <button type="button" role="tab" data-tab="newsletter" aria-selected="false">Newsletter</button>
+        <button type="button" role="tab" data-tab="contacts" aria-selected="false">Kontakt</button>
+      </div>
+
+      <section class="admin-pane" id="pane-orders">
+        <form class="admin-tools" id="o-filter"><select id="o-status" aria-label="Status"><option value="">Alle Status</option><option value="neu">Neu</option><option value="bezahlt">Bezahlt</option><option value="versendet">Versendet</option><option value="storniert">Storniert</option><option value="retoure_angefragt">Retoure angefragt</option><option value="retourniert">Retourniert</option></select><input id="o-q" type="search" placeholder="Nummer, Name, E-Mail" aria-label="Suche" /><button class="btn btn-sm" type="submit">Filtern</button><button class="btn btn-outline btn-sm" type="button" id="o-csv">CSV-Export</button><span class="admin-note" id="o-count"></span></form>
+        <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>Nr.</th><th>Datum</th><th>Status</th><th>Kunde</th><th>Summe</th><th>Zahlung</th></tr></thead><tbody id="o-body"></tbody></table></div>
+        <div class="admin-detail" id="o-detail" hidden></div>
+      </section>
+
+      <section class="admin-pane" id="pane-stock" hidden>
+        <p class="admin-note">Leeres Feld = Bestand wird nicht verwaltet (unbegrenzt). 0 = ausverkauft (Warenkorb und Bestellung werden blockiert). Ab 5 zeigt der Shop „nur noch X“. <span id="s-tracked"></span></p>
+        <div class="admin-tools"><input id="s-product" list="s-list" placeholder="Produkt-ID oder Name, z. B. h48" aria-label="Produkt" autocomplete="off" /><datalist id="s-list"></datalist><button class="btn btn-sm" type="button" id="s-save">Speichern</button></div>
+        <div id="s-grid"><p class="admin-note">Produkt wählen (ID oder Name).</p></div>
+        <div class="admin-tools"><input id="s-bulk-n" type="number" min="0" placeholder="Menge" aria-label="Menge für alle Varianten" style="width:7rem" /><button class="btn btn-outline btn-sm" type="button" id="s-bulk">Alle Varianten dieses Produkts setzen</button></div>
+        <div class="admin-tools"><input id="s-all-n" type="number" min="0" placeholder="Menge" aria-label="Menge für alle Produkte" style="width:7rem" /><button class="btn btn-outline btn-sm" type="button" id="s-all">Alle Produkte ohne Bestand setzen</button></div>
+      </section>
+
+      <section class="admin-pane" id="pane-discounts" hidden>
+        <form id="d-form" novalidate>
+          <div class="admin-grid">
+            <label>Code<input name="code" required maxlength="30" placeholder="HERBST10" style="text-transform:uppercase" /></label>
+            <label>Art<select name="type"><option value="percent">Prozent</option><option value="amount">Betrag (€)</option></select></label>
+            <label>Wert<input name="value" type="number" min="1" step="0.01" required /></label>
+            <label>Mindestwert (€)<input name="minEur" type="number" min="0" step="1" /></label>
+            <label>Ablauf (JJJJ-MM-TT)<input name="expires" type="date" /></label>
+            <label>Max. Einlösungen<input name="maxUses" type="number" min="1" step="1" /></label>
+            <label>Notiz<input name="note" maxlength="120" /></label>
+            <label>Aktiv<input name="active" type="checkbox" checked /></label>
+          </div>
+          <button class="btn btn-sm" type="submit">Code speichern</button> <span class="admin-note">Gilt nicht für Geschenkgutscheine; wird serverseitig geprüft.</span>
+        </form>
+        <div class="admin-tbl-wrap" style="margin-top:1rem"><table class="admin-tbl"><thead><tr><th>Code</th><th>Wert</th><th>Mindestwert</th><th>Ablauf</th><th>Nutzungen</th><th>Status</th><th></th></tr></thead><tbody id="d-body"></tbody></table></div>
+      </section>
+
+      <section class="admin-pane" id="pane-newsletter" hidden>
+        <p class="admin-note" id="n-count"></p>
+        <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>E-Mail</th><th>Status</th><th>Angemeldet</th><th>Bestätigt</th></tr></thead><tbody id="n-body"></tbody></table></div>
+      </section>
+
+      <section class="admin-pane" id="pane-contacts" hidden>
+        <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>Datum</th><th>Absender</th><th>Nachricht</th><th>Mail</th></tr></thead><tbody id="c-body"></tbody></table></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom" style="border:0;padding:2rem 0;">
+      <span>© 2026 VELORA Admin</span>
+      <span><a href="index.html">Zum Shop</a></span>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+    <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/admin.js?v=herbst22"></script>
+</body>
+</html>

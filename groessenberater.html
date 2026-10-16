@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Größenberater — VELORA</title>
+  <meta name="description" content="VELORA Größenberater: empfohlene Größe XS–XXL bzw. EU-Schuhgröße aus Größe, Gewicht, Fußlänge und Passform. Orientierung, keine Garantie." />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Shop</strong> — Beispielkatalog · keine echten Zahlungen</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html" class="is-active">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <form class="header-search" id="header-search" role="search">
+          <input type="search" name="q" placeholder="Suchen…" aria-label="Produkte suchen" />
+          <button type="submit" aria-label="Suche">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="advisor" aria-labelledby="advisor-title">
+      <p class="eyebrow">Service</p>
+      <h1 id="advisor-title">Größenberater</h1>
+      <p class="form-hint">Wähle Kategorie und Passform, gib Größe und Gewicht (bei Schuhen die Fußlänge) ein – wir zeigen dir die empfohlene Größe und rechnen sie in einer kleinen Tabelle nach. Alle Angaben bleiben auf deinem Gerät.</p>
+
+      <form class="advisor-form glass-panel" id="advisor-form" novalidate>
+        <div class="form-group">
+          <label for="adv-kat">Kategorie</label>
+          <select id="adv-kat" name="kat">
+            <option value="damen">Damen (Kleidung)</option>
+            <option value="herren">Herren (Kleidung)</option>
+            <option value="schuhe">Schuhe</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="adv-fit">Passform</label>
+          <select id="adv-fit" name="fit">
+            <option value="eng">Eng anliegend</option>
+            <option value="normal" selected>Normal</option>
+            <option value="locker">Locker / oversized</option>
+          </select>
+        </div>
+        <div class="form-group" data-for="kleidung">
+          <label for="adv-groesse">Körpergröße (cm)</label>
+          <input id="adv-groesse" name="groesse" type="number" inputmode="numeric" min="140" max="215" step="1" placeholder="z.&nbsp;B. 172" />
+        </div>
+        <div class="form-group" data-for="kleidung">
+          <label for="adv-gewicht">Gewicht (kg)</label>
+          <input id="adv-gewicht" name="gewicht" type="number" inputmode="numeric" min="35" max="180" step="1" placeholder="z.&nbsp;B. 64" />
+        </div>
+        <div class="form-group" data-for="schuhe" hidden>
+          <label for="adv-fuss">Fußlänge (cm)</label>
+          <input id="adv-fuss" name="fuss" type="number" inputmode="decimal" min="20" max="33" step="0.1" placeholder="z.&nbsp;B. 25,5" />
+        </div>
+        <p class="form-hint" id="adv-error" role="alert" style="grid-column:1/-1;color:#e08a8a;margin:0;" hidden></p>
+        <button type="submit" class="btn btn-magnetic">Größe berechnen</button>
+      </form>
+
+      <div class="advisor-result glass-panel" id="adv-result" aria-live="polite" hidden>
+        <p class="eyebrow" id="adv-result-label">Deine Empfehlung</p>
+        <p class="advisor-size" id="adv-size">–</p>
+        <p class="advisor-why" id="adv-why"></p>
+        <div class="advisor-table-wrap"><table class="advisor-table" id="adv-table"></table></div>
+        <p style="margin-top:1.5rem;"><a class="btn" id="adv-shop-link" href="shop.html">Passende Styles ansehen</a></p>
+      </div>
+
+      <p class="advisor-note"><strong>Hinweis:</strong> Der Größenberater ist eine Orientierung auf Basis grober Richtwerte und keine Garantie. Schnitt, Material und Körperbau beeinflussen die Passform. Die Tabellen sind Beispielwerte (Demo) und werden vor einem echten Verkauf an die tatsächlichen Schnitte und Maße der Muster angepasst. Im Zweifel zwischen zwei Größen: bei Strick und Mantel eher die größere, bei Hosen und Schuhen nach Maßtabelle.</p>
+      <p class="advisor-note">Rückfragen? Die Maße der einzelnen Styles stehen auf der jeweiligen Produktseite unter „Fit“. Alle Körpermaße im Überblick: <a href="groessentabelle.html">Größentabelle Damen / Herren / Schuhe (Schätzwerte)</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom" style="border:0;padding-top:2rem;padding-bottom:2rem;">
+      <span>© 2026 VELORA Demo</span>
+      <span><a href="lookbook.html">Lookbook</a> · Größenberater: Orientierung, keine Garantie</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Zum Warenkorb hinzugefügt</div>
+
+  <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+  <script>
+    (function () {
+      /* Richtwerte (Demo): Gewicht bestimmt die Grundgröße, Körpergröße und Passform verschieben um höchstens eine Stufe. */
+      const SIZES_ = ["XS", "S", "M", "L", "XL", "XXL"];
+      const WEIGHT_BANDS = {
+        damen:  [["XS", 0, 52], ["S", 53, 60], ["M", 61, 68], ["L", 69, 78], ["XL", 79, 90], ["XXL", 91, 999]],
+        herren: [["XS", 0, 58], ["S", 59, 68], ["M", 69, 78], ["L", 79, 89], ["XL", 90, 102], ["XXL", 103, 999]]
+      };
+      const HEIGHT_RULE = { damen: { low: 158, high: 178 }, herren: { low: 168, high: 190 } };
+      /* Schuhe: größte Fußlänge (cm) je EU-Größe */
+      const SHOES = [[36, 22.8], [37, 23.5], [38, 24.1], [39, 24.8], [40, 25.5], [41, 26.1], [42, 26.8], [43, 27.5], [44, 28.1], [45, 28.8], [46, 29.5], [47, 30.2]];
+      const FIT_LABEL = { eng: "eng anliegend", normal: "normal", locker: "locker / oversized" };
+
+      const form = document.getElementById("advisor-form");
+      const kat = document.getElementById("adv-kat");
+      const errEl = document.getElementById("adv-error");
+      const resEl = document.getElementById("adv-result");
+      const fmt = (n) => String(n).replace(".", ",");
+
+      function toggleFields() {
+        const shoes = kat.value === "schuhe";
+        form.querySelectorAll('[data-for="kleidung"]').forEach((e) => (e.hidden = shoes));
+        form.querySelectorAll('[data-for="schuhe"]').forEach((e) => (e.hidden = !shoes));
+        resEl.hidden = true;
+        errEl.hidden = true;
+      }
+      kat.addEventListener("change", toggleFields);
+
+      function num(id) {
+        return parseFloat(String(document.getElementById(id).value).replace(",", "."));
+      }
+      function fail(msg) {
+        errEl.textContent = msg;
+        errEl.hidden = false;
+        resEl.hidden = true;
+      }
+
+      function tableHtml(head, rows, hitIndex) {
+        return "<thead><tr>" + head.map((h) => "<th>" + h + "</th>").join("") + "</tr></thead><tbody>" +
+          rows.map((r, i) => '<tr' + (i === hitIndex ? ' class="is-hit"' : "") + ">" + r.map((c) => "<td>" + c + "</td>").join("") + "</tr>").join("") + "</tbody>";
+      }
+
+      function show(sizeText, why, tableHtmlStr, shopLink) {
+        errEl.hidden = true;
+        document.getElementById("adv-size").textContent = sizeText;
+        document.getElementById("adv-why").innerHTML = why;
+        document.getElementById("adv-table").innerHTML = tableHtmlStr;
+        document.getElementById("adv-shop-link").href = shopLink;
+        resEl.hidden = false;
+        resEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function adviseClothes(k, h, w, fit) {
+        const bands = WEIGHT_BANDS[k];
+        let idx = bands.findIndex((b) => w >= b[1] && w <= b[2]);
+        if (idx < 0) idx = w < bands[0][1] ? 0 : bands.length - 1;
+        const base = idx;
+        const steps = [];
+        const r = HEIGHT_RULE[k];
+        if (h >= r.high) { idx += 1; steps.push("Körpergröße ab " + r.high + " cm: +1 Größe"); }
+        else if (h <= r.low) { idx -= 1; steps.push("Körpergröße bis " + r.low + " cm: −1 Größe"); }
+        if (fit === "eng") { idx -= 1; steps.push("Passform eng: −1 Größe"); }
+        if (fit === "locker") { idx += 1; steps.push("Passform locker/oversized: +1 Größe"); }
+        const clamped = Math.max(0, Math.min(SIZES_.length - 1, idx));
+        if (clamped !== idx) steps.push("auf den Bereich XS–XXL begrenzt");
+        const result = SIZES_[clamped];
+        const why = "Grundgröße nach Gewicht (" + w + " kg): <strong>" + SIZES_[base] + "</strong>" +
+          (steps.length ? " → " + steps.join(" → ") : " (keine Anpassung durch Körpergröße oder Passform)") +
+          " = <strong>" + result + "</strong>. Eingaben: " + h + " cm, " + w + " kg, Passform " + FIT_LABEL[fit] + ".";
+        const rows = bands.map((b) => [b[0], b[2] >= 999 ? "ab " + b[1] + " kg" : (b[1] === 0 ? "bis " + b[2] + " kg" : b[1] + "–" + b[2] + " kg")]);
+        const t = tableHtml(["Größe", "Gewicht (Grundgröße)"], rows, base) +
+          "<tfoot><tr><td colspan='2' style='font-size:12px;color:var(--stone);padding-top:.8rem'>Körpergröße: bis " + r.low + " cm −1 · ab " + r.high + " cm +1 · Passform: eng −1, locker +1</td></tr></tfoot>";
+        show(result, why, t, "shop.html?main=" + k);
+      }
+
+      function adviseShoes(f, fit) {
+        let i = SHOES.findIndex((s) => f <= s[1]);
+        let note = "";
+        if (i < 0) { i = SHOES.length - 1; note = " Deine Fußlänge liegt über unserer Tabelle – bitte Maße am Produkt prüfen."; }
+        const baseEU = SHOES[i][0];
+        let eu = baseEU;
+        let step = "";
+        if (fit === "locker") { eu = Math.min(47, eu + 1); step = " + 1 für lockeren Sitz"; }
+        if (f < 22.8 * 0.985 && i === 0) note = " Deine Fußlänge liegt unter unserer kleinsten Größe (EU 36)." ;
+        const why = "Fußlänge " + fmt(f) + " cm → Tabellengröße EU <strong>" + baseEU + "</strong>" + step + " = <strong>EU " + eu + "</strong> (Passform " + FIT_LABEL[fit] + (fit === "eng" ? ": gleiche Größe wie normal, da die Fußlänge entscheidet" : "") + ")." + note;
+        const rows = SHOES.map((s, n) => ["EU " + s[0], (n === 0 ? "bis " : "bis ") + fmt(s[1]) + " cm"]);
+        const t = tableHtml(["Schuhgröße", "Fußlänge (max.)"], rows, i);
+        show("EU " + eu, why, t, "shop.html?cat=schuhe");
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const k = kat.value;
+        const fit = document.getElementById("adv-fit").value;
+        if (k === "schuhe") {
+          const f = num("adv-fuss");
+          if (!(f >= 20 && f <= 33)) return fail("Bitte eine Fußlänge zwischen 20 und 33 cm eingeben (Ferse bis längste Zehe, im Stehen gemessen).");
+          return adviseShoes(f, fit);
+        }
+        const h = num("adv-groesse"), w = num("adv-gewicht");
+        if (!(h >= 140 && h <= 215)) return fail("Bitte eine Körpergröße zwischen 140 und 215 cm eingeben.");
+        if (!(w >= 35 && w <= 180)) return fail("Bitte ein Gewicht zwischen 35 und 180 kg eingeben.");
+        adviseClothes(k, h, w, fit);
+      });
+
+      const pre = getQueryParam("kat");
+      if (["damen", "herren", "schuhe"].includes(pre)) kat.value = pre;
+      toggleFields();
+      document.addEventListener("DOMContentLoaded", () => initMagneticButtons());
+    })();
+  </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>

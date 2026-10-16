@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutzerklärung — VELORA</title>
+  <meta name="description" content="Datenschutzerklärung (Vorlage, de-AT): Daten, Cookies, Resend, Stripe, Newsletter" />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Shop</strong> — Beispielkatalog · keine echten Zahlungen</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap legal-wrap">
+    <article class="legal-page">
+<nav class="legal-nav" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerruf.html">Widerruf</a><a href="versand.html">Versand &amp; Zahlung</a><a href="retouren.html">Retouren</a><a href="groessentabelle.html">Größentabelle</a><a href="kontakt.html">Kontakt</a></nav>
+<div class="legal-banner" role="note"><strong>Vorlage – vor Livegang anwaltlich prüfen.</strong> Platzhalter <span class="ph">[IN KLAMMERN]</span> ausfüllen. Dieser Text ist ein Ausgangspunkt für Österreich/EU (de-AT) und keine Rechtsberatung.</div>
+
+      <h1>Datenschutzerklärung</h1>
+      <p class="form-hint">Stand: <span class="ph">[Datum]</span> · Information nach Art. 13/14 DSGVO.</p>
+      <h2 id="verantwortlicher">1. Verantwortlicher</h2>
+      <p><span class="ph">[Firmenname, Anschrift, E-Mail wie im Impressum]</span> (siehe <a href="impressum.html">Impressum</a>). Datenschutzbeauftragter: <span class="ph">[falls bestellt, sonst streichen]</span>.</p>
+      <h2 id="logfiles">2. Besuch der Website (Server-Logdaten)</h2>
+      <p>Beim Aufruf verarbeitet der Webserver technisch notwendig: IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, Browser-Angaben. Zweck: Auslieferung der Seite, Sicherheit und Fehleranalyse. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO). Speicherdauer: <span class="ph">[z. B. 7 Tage]</span>. Hosting: <span class="ph">[Hoster, Standort, Auftragsverarbeitungsvertrag]</span>.</p>
+      <h2 id="cookies">3. Cookies und lokaler Speicher</h2>
+      <p>Wir setzen <strong>ausschließlich technisch notwendige</strong> Speicherungen ein. Es gibt <strong>kein Tracking, keine Analyse- und keine Werbe-Cookies</strong>; darum ist keine Einwilligungsabfrage nötig – der Hinweis-Banner dient nur der Information.</p>
+      <div class="table-scroll"><table>
+        <thead><tr><th>Name</th><th>Art</th><th>Zweck</th><th>Dauer</th></tr></thead>
+        <tbody>
+          <tr><td><code>velora_sid</code></td><td>Cookie (HttpOnly)</td><td>Anmeldung (Sitzung) im Kundenkonto</td><td>bis zu 7 Tage bzw. bis zum Abmelden</td></tr>
+          <tr><td><code>velora_cart_v1</code></td><td>Local Storage</td><td>Warenkorb</td><td>bis zum Löschen durch Sie / nach Bestellung</td></tr>
+          <tr><td><code>velora_auth</code></td><td>Local Storage</td><td>Merker „angemeldet“ (nur Vorname) für die Kopfzeile</td><td>bis zum Abmelden</td></tr>
+          <tr><td><code>velora_code</code></td><td>Local Storage</td><td>eingelöster Rabattcode im Warenkorb</td><td>bis zum Löschen / nach Bestellung</td></tr>
+          <tr><td><code>velora_notice_v1</code></td><td>Local Storage</td><td>Merker, dass der Hinweis-Banner bestätigt wurde</td><td>dauerhaft</td></tr>
+        </tbody></table></div>
+      <p>Rechtsgrundlage: § 165 Abs. 3 TKG 2021 (technisch notwendig) bzw. Art. 6 Abs. 1 lit. b/f DSGVO. Im Browser können Sie Cookies und Speicher jederzeit löschen; die Anmeldung und der Warenkorb funktionieren dann nicht mehr.</p>
+      <h2 id="schriften">4. Schriftarten</h2>
+      <p><span class="ph">[Variante A: Die Schriftarten werden lokal von unserem Server geladen, es erfolgt keine Verbindung zu Google.]</span> <span class="ph">[Variante B (aktueller Demo-Stand, solange die Schriften noch von Google Fonts geladen werden): Die Schriftarten werden von Google Fonts (Google Ireland Ltd.) geladen; dabei wird Ihre IP-Adresse an Google übertragen. Vor Livegang empfohlen: Schriften lokal einbinden und diesen Absatz auf Variante A ändern.]</span></p>
+      <h2 id="konto">5. Kundenkonto</h2>
+      <p>Bei der Registrierung verarbeiten wir Vorname, Nachname, E-Mail-Adresse und ein Passwort (nur als gesalzener scrypt-Hash gespeichert). Zweck: Bereitstellung des Kontos und der Bestellübersicht. Rechtsgrundlage: Vertragserfüllung (Art. 6 Abs. 1 lit. b). Speicherdauer: bis zur Löschung des Kontos. Für „Passwort vergessen“ senden wir einen einmaligen, 1 Stunde gültigen Link per E-Mail.</p>
+      <h2 id="bestellung">6. Bestellungen</h2>
+      <p>Wir verarbeiten Name, Anschrift, E-Mail, ggf. Telefonnummer, bestellte Artikel, Zahlungsstatus und Versandinformationen, um den Kaufvertrag zu erfüllen (Art. 6 Abs. 1 lit. b DSGVO). Aufbewahrung der Buchhaltungsunterlagen: <span class="ph">[7 Jahre – § 132 BAO; bitte mit Steuerberater prüfen]</span> (Art. 6 Abs. 1 lit. c). Empfänger: Versanddienstleister (<span class="ph">[z. B. Österreichische Post AG / DHL]</span>), Zahlungsdienstleister (siehe unten), Steuerberater <span class="ph">[falls zutreffend]</span>. Eine Bestellung als Gast ist möglich.</p>
+      <h2 id="zahlung">7. Zahlungsabwicklung (Stripe)</h2>
+      <p>Sofern die Online-Zahlung aktiv ist, erfolgt sie über Stripe (Stripe Payments Europe, Ltd., Irland; ggf. Übermittlung an Stripe, Inc., USA, auf Grundlage von Standardvertragsklauseln bzw. des EU-US Data Privacy Framework). Zahlungsdaten (z. B. Kartennummer) gibt der Kunde direkt auf der Stripe-Seite ein und erreichen unseren Server nicht. Im <strong>Demo-Betrieb ohne Stripe-Schlüssel</strong> wird keine Zahlung durchgeführt und es werden keine Daten an Stripe übermittelt.</p>
+      <h2 id="mail">8. E-Mail-Versand (Resend)</h2>
+      <p>Transaktionsmails (Bestellbestätigung, Versandmitteilung, Passwort zurücksetzen, Willkommens- und Newsletter-Bestätigungsmail) versenden wir über den Dienst Resend (Resend, Inc., USA, als Auftragsverarbeiter; Standardvertragsklauseln <span class="ph">[prüfen/abschließen]</span>). Dabei werden Empfängeradresse, Inhalt der Mail und technische Metadaten verarbeitet. Rechtsgrundlage: Vertragserfüllung bzw. berechtigtes Interesse (Art. 6 Abs. 1 lit. b/f DSGVO).</p>
+      <h2 id="kontakt">9. Kontaktformular und E-Mail</h2>
+      <p>Ihre Angaben (Name, E-Mail, Betreff, Nachricht) werden zur Bearbeitung Ihrer Anfrage gespeichert und an uns per E-Mail weitergeleitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b bzw. f DSGVO. Löschung: spätestens <span class="ph">[6 Monate]</span> nach Abschluss der Anfrage, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+      <h2 id="newsletter">10. Newsletter</h2>
+      <p>Wir senden den Newsletter nur mit Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) im <strong>Double-Opt-In</strong>: Nach der Eintragung erhalten Sie eine E-Mail mit Bestätigungslink; erst danach sind Sie angemeldet. Gespeichert werden E-Mail-Adresse sowie Zeitpunkte der Anmeldung, Bestätigung und ggf. Abmeldung. Abmeldung jederzeit über den Link in jeder E-Mail oder per Nachricht an uns. Versand erfolgt über Resend (siehe oben).</p>
+      <h2 id="rechte">11. Ihre Rechte</h2>
+      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Recht, erteilte Einwilligungen jederzeit zu widerrufen. Wenn Sie glauben, dass die Verarbeitung gegen Datenschutzrecht verstößt, können Sie sich bei uns oder bei der Aufsichtsbehörde beschweren: Österreichische Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, <a href="https://www.dsb.gv.at" rel="noopener" target="_blank">www.dsb.gv.at</a>.</p>
+      <h2 id="sicherheit">12. Sicherheit, automatisierte Entscheidungen</h2>
+      <p>Die Übertragung erfolgt – sobald der Shop live ist – ausschließlich über HTTPS. Es findet keine automatisierte Entscheidungsfindung oder Profilbildung statt.</p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom" style="border:0;padding:2rem 0;">
+      <span>© 2026 VELORA Demo</span>
+      <span><a href="lookbook.html">Lookbook</a> · <a href="groessenberater.html">Größenberater</a> · Demo-Shop</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+    <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>

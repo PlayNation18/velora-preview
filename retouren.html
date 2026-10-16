@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Retouren — VELORA</title>
+  <meta name="description" content="Retouren und Rücksendung: Ablauf, Frist, Erstattung (Vorlage)" />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Shop</strong> — Beispielkatalog · keine echten Zahlungen</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap legal-wrap">
+    <article class="legal-page">
+<nav class="legal-nav" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="widerruf.html">Widerruf</a><a href="versand.html">Versand &amp; Zahlung</a><a href="retouren.html">Retouren</a><a href="groessentabelle.html">Größentabelle</a><a href="kontakt.html">Kontakt</a></nav>
+<div class="legal-banner" role="note"><strong>Vorlage – vor Livegang anwaltlich prüfen.</strong> Platzhalter <span class="ph">[IN KLAMMERN]</span> ausfüllen. Dieser Text ist ein Ausgangspunkt für Österreich/EU (de-AT) und keine Rechtsberatung.</div>
+
+      <h1>Retouren</h1>
+      <p class="form-hint">Rücksendung innerhalb von 14 Tagen nach Erhalt (Widerrufsrecht, siehe <a href="widerruf.html">Widerrufsbelehrung</a>).</p>
+      <h2>So funktioniert die Rücksendung</h2>
+      <ol>
+        <li><strong>Retoure anmelden:</strong> im <a href="konto.html">Kundenkonto</a> bei der Bestellung auf „Retoure / Widerruf anfragen“ klicken – oder als Gast über die <a href="widerruf.html#online">Widerrufsfunktion</a> (Bestellnummer + E-Mail). Die Bestellung erhält den Status „Retoure angefragt“.</li>
+        <li><strong>Verpacken:</strong> Artikel ungetragen, unbeschädigt und mit Etiketten, möglichst in der Originalverpackung. Bitte legen Sie die Bestellnummer bei.</li>
+        <li><strong>Senden an:</strong> <span class="ph">[Name, Straße, PLZ Ort, Österreich – Rücksendeadresse]</span></li>
+        <li><strong>Erstattung:</strong> nach Eingang und Prüfung der Ware, spätestens 14 Tage nach Eingang Ihrer Widerrufserklärung (siehe Widerrufsbelehrung), über das ursprüngliche Zahlungsmittel. Der Status wechselt auf „Retourniert“.</li>
+      </ol>
+      <h2>Rücksendekosten</h2>
+      <p><span class="ph">[Bitte festlegen: Rücksendekosten trägt der Kunde / VELORA stellt ein Retourenlabel bereit.]</span></p>
+      <h2>Hygieneartikel</h2>
+      <p>Unterwäsche (z. B. Boxershorts) ist aus Hygienegründen nur in <strong>ungeöffneter, versiegelter</strong> Verpackung von der Rückgabe erfasst. <span class="ph">[Regelung prüfen]</span></p>
+      <h2>Beschädigte oder falsche Ware</h2>
+      <p>Bitte melden Sie sich in diesem Fall umgehend über das <a href="kontakt.html">Kontaktformular</a> – gesetzliche Gewährleistungsrechte bleiben unberührt (siehe <a href="agb.html">AGB</a>).</p>
+      <h2>Umtausch</h2>
+      <p>Einen Umtausch bieten wir als Retoure mit Neubestellung an. <span class="ph">[Alternativ: direkter Größentausch – festlegen]</span></p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom" style="border:0;padding:2rem 0;">
+      <span>© 2026 VELORA Demo</span>
+      <span><a href="lookbook.html">Lookbook</a> · <a href="groessenberater.html">Größenberater</a> · Demo-Shop</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+    <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produkt — VELORA</title>
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Shop</strong> — Beispielkatalog · keine echten Zahlungen</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <form class="header-search" id="header-search" role="search">
+          <input type="search" name="q" placeholder="Suchen…" aria-label="Produkte suchen" />
+          <button type="submit" aria-label="Suche">
+            <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="pdp-root">
+      <p class="empty-state" style="padding:4rem 0;">Produkt wird geladen…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom" style="border:0;padding-top:2rem;padding-bottom:2rem;">
+      <span>© 2026 VELORA Demo</span>
+      <span><a href="lookbook.html">Lookbook</a> · <a href="groessenberater.html">Größenberater</a> · Beispielprodukt</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Zum Warenkorb hinzugefügt</div>
+
+  <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const id = getQueryParam("id");
+      const product = id ? getProductById(id) : null;
+      const root = document.getElementById("pdp-root");
+
+      if (!product) {
+        root.innerHTML =
+          '<p class="empty-state">Produkt nicht gefunden. <a href="shop.html">Zurück zum Shop</a></p>';
+        return;
+      }
+
+      document.title = product.name + " — VELORA";
+      function pdpPriceHtml(p, color) {
+        const cur = formatPrice(variantPrice(p, color && color.id));
+        return isSale(p) ? `<span class="price-old">${formatPrice(p.oldPrice)}</span> <span class="price-sale">${cur}</span>` : cur;
+      }
+      let selectedSize = "M";
+      let selectedColor = getDefaultColor(product);
+      const sizeList = product.sizes && product.sizes.length ? product.sizes : SIZES;
+      if (product.defaultSize && sizeList.includes(product.defaultSize)) selectedSize = product.defaultSize;
+      else if (product.sizes && product.sizes.length) selectedSize = product.sizes[0];
+      else if (!sizeList.includes(selectedSize)) selectedSize = sizeList[0];
+      const backCat = productTab(product);
+      const wParam = getQueryParam("w");
+      const backWorld = WORLDS.includes(wParam) && productInWorld(product, wParam) ? wParam : productMain(product);
+
+      const initialImage =
+        (selectedColor && selectedColor.image) || product.image || "";
+
+      const asText = !!product.colorsAsText;
+      const colorsBlock =
+        product.colors && product.colors.length
+          ? `<p class="size-label">${escapeHtml(product.colorLabel || "Farbe")}${
+              selectedColor ? ` · <span id="color-name">${escapeHtml(selectedColor.name)}</span>` : ""
+            }</p>
+            <div class="${asText ? "variant-pills" : "color-swatches"}" id="color-swatches" role="listbox" aria-label="${escapeHtml(product.colorLabel || "Farbe")}">
+              ${product.colors
+                .map((c, i) =>
+                  asText
+                    ? `<button type="button" class="color-swatch${i === 0 ? " is-active" : ""}" role="option" data-color-id="${escapeHtml(c.id)}" aria-selected="${i === 0 ? "true" : "false"}" title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</button>`
+                    : `<button type="button" class="color-swatch${i === 0 ? " is-active" : ""}" role="option" data-color-id="${escapeHtml(c.id)}" aria-label="${escapeHtml(c.name)}" aria-selected="${i === 0 ? "true" : "false"}" style="--swatch-hex:${escapeHtml(c.hex)}" title="${escapeHtml(c.name)}"></button>`
+                )
+                .join("")}
+            </div>`
+          : "";
+
+      root.innerHTML = `
+        <nav class="breadcrumb" aria-label="Brotkrümel"><a class="back-link" href="shop.html?main=${backWorld}&cat=${backCat}">← Zurück zu ${GENDER_LABELS[backWorld]} · ${CATEGORY_LABELS[backCat] || "Shop"}</a>${productGender(product) === "unisex" ? ' <span class="gender-badge" title="Erscheint in Damen und Herren">Unisex</span>' : ""}</nav>
+        <div class="pdp reveal is-visible">
+          <div class="pdp-gallery">
+            ${productImageHtml(product, "product-visual", initialImage)}
+            ${product.colors && product.colors.length && !asText && new Set(product.colors.map((c) => c.image)).size > 1 ? `<div class="pdp-thumbs" id="pdp-thumbs">${product.colors.map((c,i) => `<button type="button" class="pdp-thumb${i===0?" is-active":""}" data-color-id="${escapeHtml(c.id)}" aria-label="${escapeHtml(c.name)}"><img loading="lazy" decoding="async" src="${escapeHtml(c.image)}" alt="${escapeHtml(c.name)}" /></button>`).join("")}</div>` : ""}
+            ${product.gallery && product.gallery.length ? `<div class="pdp-gallery-extra" id="pdp-gallery-extra">${product.gallery.map((g) => `<figure><img loading="lazy" decoding="async" src="${escapeHtml(g.src)}" alt="${escapeHtml(g.label || "")}" /><figcaption>${escapeHtml(g.label || "")}</figcaption></figure>`).join("")}</div>` : ""}
+          </div>
+          <div class="pdp-info">
+            <p class="eyebrow">${product.audience || CATEGORY_LABELS[product.category] || ""} · ${product.tags && product.tags.includes("herbst") ? "Herbst 2026" : "Beispielartikel"}</p>
+            <h1>${escapeHtml(product.name)}</h1>
+            <p class="pdp-price" id="pdp-price">${pdpPriceHtml(product, selectedColor)}</p>
+            ${isSale(product) ? '<p class="sale-demo-note">DEMO-Sale: Beispielpreis (−' + salePercent(product) + ' %), kein echtes Angebot.</p>' : ""}
+            <p class="pdp-desc">${escapeHtml(product.description)}</p>
+            ${product.fabric ? `<div class="pdp-spec">
+              <p><strong>Stoff</strong> · ${escapeHtml(product.fabric)}</p>
+              <p><strong>${product.type === "tasche" ? "Maße" : product.type === "guertel" ? "Maße" : "Fit"}</strong> · ${escapeHtml(product.fit || "siehe Beschreibung")}</p>
+              <p><strong>Hinweis</strong> · ${escapeHtml(product.madeIn || "Muster / noch nicht in Produktion")}</p>
+            </div>` : ""}
+            ${colorsBlock}
+            <p class="size-label">${product.sizeUnit ? "Länge" : product.sizes && product.sizes.length ? "Größe" : "Größe wählen"}</p>
+            <p class="size-hint" id="size-hint">${escapeHtml(sizeHint(product))}${product.type === "gutschein" ? "" : ` · <a class="size-advisor-link" href="groessenberater.html?kat=${product.type === "schuhe" ? "schuhe" : product.category === "herren" ? "herren" : "damen"}">Größe unsicher? Größenberater</a> · <a class="size-advisor-link" href="groessentabelle.html">Größentabelle</a>`}</p>
+            <div class="size-pills${product.sizeUnit ? " size-pills-cm" : ""}" id="size-pills" role="group" aria-label="${product.sizeUnit ? "Länge in cm" : "Größe"}">
+              ${sizeList.map(
+                (s) =>
+                  `<button type="button" class="size-pill${s === selectedSize ? " is-active" : ""}" data-size="${escapeHtml(s)}" aria-label="${escapeHtml(product.sizeUnit ? sizeLabel(product, s) : "Größe " + s)}">${escapeHtml(s)}</button>`
+              ).join("")}
+            </div>
+            <p class="stock-note" id="stock-note" aria-live="polite"></p>
+            <button type="button" class="btn btn-magnetic" id="add-btn" data-label="In den Warenkorb">In den Warenkorb</button>
+            <p class="pdp-note">${product.type === "gutschein" ? "Digitaler Gutschein per E-Mail (Demo) · kein Versand · " : ""}Demo-Artikel · ${product.sizeUnit ? "Länge 80–120 cm" : product.sizes && product.sizes.length === 1 ? "Einheitsgröße" : escapeHtml(sizeHint(product))} · Keine echte Lagerverwaltung</p>
+            ${product.matches && product.matches.length ? `<div class="pdp-match"><p class="size-label">Passend dazu</p><ul class="pdp-match-list">${product.matches.map((mid) => { const mp = getProductById(mid); return mp ? `<li><a href="product.html?id=${encodeURIComponent(mp.id)}">${escapeHtml(mp.name)}</a> <span>${formatPrice(lowestPrice(mp))}</span></li>` : ""; }).join("")}</ul></div>` : ""}
+            <p class="pdp-philosophie">Unsere Philosophie: edel statt laut — Gold nur als Akzent. <a href="index.html#philosophie">Mehr erfahren</a></p>
+          </div>
+        </div>
+        ${
+          product.patterns && product.patterns.length
+            ? `<section class="pdp-patterns-section glass-panel reveal is-visible" aria-label="Schnitt / Tech-Pack">
+            <p class="eyebrow">Atelier</p>
+            <h2 class="pdp-patterns-title">Schnitt / Tech-Pack</h2>
+            <div class="pdp-patterns">
+              ${product.patterns
+                .map(
+                  (pat) => `<figure class="pdp-pattern-card">
+                    <img src="${escapeHtml(pat.src)}" alt="${escapeHtml(pat.label || "Schnitt")}" loading="lazy" decoding="async" />
+                    <figcaption>${escapeHtml(pat.label || "")}</figcaption>
+                  </figure>`
+                )
+                .join("")}
+            </div>
+          </section>`
+            : ""
+        }`;
+
+      const mainImg = root.querySelector(".pdp-gallery img");
+
+      const pills = root.querySelectorAll(".size-pill");
+      pills.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          selectedSize = btn.dataset.size;
+          pills.forEach((p) => p.classList.toggle("is-active", p === btn));
+        });
+      });
+
+      const swatches = root.querySelectorAll(".color-swatch");
+      swatches.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const cid = btn.dataset.colorId;
+          selectedColor = product.colors.find((c) => c.id === cid) || selectedColor;
+          swatches.forEach((s) => {
+            const on = s === btn;
+            s.classList.toggle("is-active", on);
+            s.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          const nameEl = document.getElementById("color-name");
+          if (nameEl && selectedColor) nameEl.textContent = selectedColor.name;
+          const priceEl = document.getElementById("pdp-price");
+          if (priceEl) priceEl.innerHTML = pdpPriceHtml(product, selectedColor);
+          if (mainImg && selectedColor && selectedColor.image) {
+            mainImg.src = selectedColor.image;
+            mainImg.style.display = "";
+            const fb = mainImg.nextElementSibling;
+            if (fb) fb.style.display = "none";
+          }
+          const gallery = root.querySelector(".pdp-gallery .product-visual");
+          if (gallery && selectedColor && selectedColor.hex) {
+            gallery.style.setProperty("--swatch", selectedColor.hex);
+          }
+          root.querySelectorAll(".pdp-thumb").forEach((th) => {
+            th.classList.toggle("is-active", th.dataset.colorId === cid);
+          });
+        });
+      });
+      root.querySelectorAll(".pdp-thumb").forEach((th) => {
+        th.addEventListener("click", () => {
+          const match = root.querySelector(`.color-swatch[data-color-id="${th.dataset.colorId}"]`);
+          if (match) match.click();
+        });
+      });
+
+      document.getElementById("add-btn").addEventListener("click", () => {
+        const colorPayload = selectedColor
+          ? { id: selectedColor.id, name: selectedColor.name }
+          : null;
+        const added = addToCart(product.id, selectedSize, 1, colorPayload);
+        if (added === false) return; // ausverkauft oder Bestand erreicht (Meldung kommt von VeloraStock)
+        const toast = document.getElementById("toast");
+        toast.classList.add("is-visible");
+        setTimeout(() => toast.classList.remove("is-visible"), 1800);
+      });
+
+      /* Bestand: "nur noch X" / "ausverkauft" (Daten von /api/stock; ohne Server bleibt alles verfügbar) */
+      function refreshStock() {
+        if (!window.VeloraStock) return;
+        const cid = selectedColor ? selectedColor.id : null;
+        root.querySelectorAll(".size-pill").forEach((b) => {
+          const l = VeloraStock.left(product.id, cid, b.dataset.size);
+          b.classList.toggle("is-soldout", l === 0);
+          b.setAttribute("aria-label", (product.sizeUnit ? sizeLabel(product, b.dataset.size) : "Größe " + b.dataset.size) + (l === 0 ? " – ausverkauft" : l !== null && l <= VeloraStock.LOW ? " – nur noch " + l : ""));
+        });
+        const l = VeloraStock.left(product.id, cid, selectedSize);
+        const noteEl = document.getElementById("stock-note"), addBtn = document.getElementById("add-btn");
+        noteEl.textContent = l === null ? "" : VeloraStock.note(l);
+        noteEl.classList.toggle("is-out", l === 0);
+        addBtn.disabled = l === 0;
+        addBtn.textContent = l === 0 ? "Ausverkauft" : addBtn.getAttribute("data-label");
+      }
+      root.querySelectorAll(".size-pill, .color-swatch, .pdp-thumb").forEach((el) => el.addEventListener("click", refreshStock));
+      if (window.VeloraStock) VeloraStock.onReady(refreshStock);
+
+      initMagneticButtons();
+    });
+  </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>

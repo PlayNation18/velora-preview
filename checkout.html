@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kasse — VELORA</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/styles.css?v=herbst22" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="VELORA" />
+  <link rel="icon" href="icons/favicon.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+</head>
+<body>
+  <div class="page-video-bg" aria-hidden="true">
+    <video
+      class="page-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="video/palais-poster.jpg"
+    >
+      <source src="video/palais.mp4" type="video/mp4" />
+    </video>
+    <div class="page-video-overlay"></div>
+  </div>
+  <div class="demo-banner"><strong>Demo-Kasse</strong> — Bestellungen werden serverseitig angelegt · im Demo-Modus keine echte Zahlung</div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="index.html"><span>Velora</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a class="nav-world" href="shop.html?main=damen">Damen</a>
+        <a class="nav-world" href="shop.html?main=herren">Herren</a>
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" id="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-dropdown-menu" aria-haspopup="true">Kollektion <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+          <div class="nav-group nav-group-damen">
+            <a class="nav-group-head" href="shop.html?main=damen">Damen</a>
+            <a href="shop.html?main=damen&amp;cat=kleider">Kleider &amp; Röcke</a>
+            <a href="shop.html?main=damen&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=damen&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=damen&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=damen&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=damen&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=damen&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=damen&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=damen&amp;cat=sport">Sport</a>
+            <a href="shop.html?main=damen&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=damen&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-herren">
+            <a class="nav-group-head" href="shop.html?main=herren">Herren</a>
+            <a href="shop.html?main=herren&amp;cat=polos">Polos</a>
+            <a href="shop.html?main=herren&amp;cat=strick">Strick</a>
+            <a href="shop.html?main=herren&amp;cat=oberteile">Oberteile &amp; Hemden</a>
+            <a href="shop.html?main=herren&amp;cat=hosen">Hosen</a>
+            <a href="shop.html?main=herren&amp;cat=jacken">Jacken</a>
+            <a href="shop.html?main=herren&amp;cat=maentel">Mäntel</a>
+            <a href="shop.html?main=herren&amp;cat=westen">Westen</a>
+            <a href="shop.html?main=herren&amp;cat=sets">Sets</a>
+            <a href="shop.html?main=herren&amp;cat=bademode">Bademode</a>
+            <a href="shop.html?main=herren&amp;cat=unterwaesche">Unterwäsche</a>
+            <a href="shop.html?main=herren&amp;cat=pyjama">Loungewear &amp; Pyjama</a>
+            <a href="shop.html?main=herren&amp;cat=schuhe">Schuhe</a>
+            <a href="shop.html?main=herren&amp;cat=taschen">Taschen</a>
+            <a href="shop.html?main=herren&amp;cat=guertel">Gürtel</a>
+            <a href="shop.html?main=herren&amp;cat=socken">Socken</a>
+            <a href="shop.html?main=herren&amp;cat=accessoires">Accessoires</a>
+          </div>
+          <div class="nav-group nav-group-aktionen">
+            <p class="nav-group-label">Zusatz-Filter</p>
+            <a class="nav-group-head" href="shop.html?f=geschenke">Geschenke</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=geschenke">Damen</a><a href="shop.html?main=herren&amp;f=geschenke">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=sale">Sale</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=sale">Damen</a><a href="shop.html?main=herren&amp;f=sale">Herren</a></span>
+            <a class="nav-group-head" href="shop.html?f=herbst">Herbst-Kollektion</a>
+            <span class="nav-pair"><a href="shop.html?main=damen&amp;f=herbst">Damen</a><a href="shop.html?main=herren&amp;f=herbst">Herren</a></span>
+          </div>
+          </div>
+        </div>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#philosophie">Philosophie</a>
+        <a href="lookbook.html">Lookbook</a>
+        <a href="groessenberater.html">Größenberater</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn account-link" id="account-link" href="login.html" aria-label="Anmelden"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.9 3.7-5.9 7.5-5.9s6.6 2 7.5 5.9"/></svg><span class="account-label">Anmelden</span></a>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen">
+          <svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 016 0v2"/></svg>
+          <span id="cart-badge" hidden></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="checkout-root"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bottom" style="border:0;padding:2rem 0;">
+      <span>© 2026 VELORA Demo</span>
+      <span><a href="lookbook.html">Lookbook</a> · <a href="groessenberater.html">Größenberater</a> · Demo-Shop</span>
+    </div>
+      <!-- footer-service -->
+    <div class="wrap footer-service">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div>
+          <h4>Newsletter</h4>
+          <p>Neuheiten und Aktionen – Anmeldung per Double-Opt-In, jederzeit abbestellbar.</p>
+        </div>
+        <div class="newsletter-fields">
+          <label class="sr-only" for="nl-email">E-Mail-Adresse</label>
+          <input id="nl-email" type="email" name="email" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required />
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn" data-label="Anmelden">Anmelden</button>
+        </div>
+        <label class="check-label nl-accept" for="nl-accept"><input id="nl-accept" type="checkbox" required /> <span>Ich möchte den VELORA-Newsletter erhalten (Abmeldung jederzeit). Siehe <a href="datenschutz.html#newsletter">Datenschutzerklärung</a>.</span></label>
+        <p class="nl-msg" id="nl-msg" role="status" aria-live="polite" hidden></p>
+      </form>
+      <nav class="footer-legal" aria-label="Rechtliches und Service">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+        <a href="widerruf.html">Widerruf</a>
+        <a href="versand.html">Versand &amp; Zahlung</a>
+        <a href="retouren.html">Retouren</a>
+        <a href="groessentabelle.html">Größentabelle</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-template-note">Demo-Shop: Rechtstexte sind Vorlagen – vor Livegang anwaltlich prüfen.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Warenkorb">
+    <div class="cart-drawer-head">
+      <h2>Warenkorb</h2>
+      <button class="icon-btn" id="cart-close" aria-label="Schließen">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-drawer-foot">
+      <div class="cart-subtotal-row">
+        <span>Zwischensumme</span>
+        <strong id="cart-subtotal">€&nbsp;0,00</strong>
+      </div>
+      <p class="cart-vat">inkl. 20&nbsp;% MwSt. (Demo-Hinweis)</p>
+      <a class="btn btn-block" href="checkout.html">Zur Kasse</a>
+    </div>
+  </aside>
+
+  <script src="js/products.js?v=herbst22"></script>
+  <script src="js/cart.js?v=herbst22"></script>
+  <script src="js/app.js?v=herbst22"></script>
+  <script src="js/config.js?v=herbst22"></script>
+  <script src="js/auth.js?v=herbst22"></script>
+  <script src="js/stock.js?v=herbst22"></script>
+  <script src="js/site.js?v=herbst22"></script>
+  <script>
+    (function () {
+      "use strict";
+      const root = document.getElementById("checkout-root");
+      const api = (path, method, body) => window.VeloraAuth.api(path, method, body);
+      const cents = (c) => formatPrice(c / 100);
+      const UNREACH = "Der Shop-Server ist nicht erreichbar. Bestellungen sind nur mit laufendem Server möglich (node backend/server.js). Bitte versuchen Sie es später erneut.";
+      let health = { mail: "aus", payment: "demo" };
+      let me = null;
+
+      function itemsPayload() { return loadCart().map((i) => ({ id: i.id, colorId: i.colorId || null, size: i.size, qty: i.qty })); }
+
+      function linesHtml(items) {
+        return items.map((i) => `<div class="summary-line"><span>${escapeHtml(i.name)} × ${i.qty}</span><span>${cents(i.unitCents * i.qty)}</span></div>`).join("");
+      }
+      function totalsHtml(q) {
+        return `<div class="summary-line"><span>Zwischensumme</span><span>${cents(q.subtotalCents)}</span></div>` +
+          (q.discount && q.discount.cents ? `<div class="summary-line is-discount"><span>Rabattcode ${escapeHtml(q.discount.code)}</span><span>−${cents(q.discount.cents)}</span></div>` : "") +
+          `<div class="summary-line"><span>Versand</span><span>${q.shippingCents === 0 ? "Gratis" : cents(q.shippingCents)}</span></div>` +
+          `<div class="summary-total"><span>Gesamt</span><span>${cents(q.totalCents)}</span></div>` +
+          `<p class="cart-vat" style="margin-top:0.75rem;">inkl. ${cents(q.vatCents)} USt. (20&nbsp;%)</p>`;
+      }
+
+      function renderConfirmation(order, mode) {
+        clearCart(); saveCode("");
+        const mailNote = health.mail === "resend" ? `Eine Bestätigung wurde an <strong>${escapeHtml(order.customer.email)}</strong> gesendet.` : health.mail === "dry-run" ? "Testmodus: Es wird keine E-Mail versendet." : "E-Mail-Versand ist auf diesem Server nicht eingerichtet.";
+        const demo = order.payment && order.payment.method === "demo";
+        root.innerHTML = `
+          <div class="confirm-panel">
+            <span class="confirm-badge">${demo ? "Demo · keine Zahlung durchgeführt" : "Bestellung eingegangen"}</span>
+            <h1>Vielen Dank</h1>
+            <p>${demo ? "Ihre Demo-Bestellung wurde angelegt – es wurden keine Zahlungsdaten verarbeitet, und es wird nichts geliefert." : "Ihre Bestellung ist bei uns eingegangen."}</p>
+            <p class="order-num" id="order-number">${escapeHtml(order.no)}</p>
+            <p>${mailNote}</p>
+            <div class="confirm-lines checkout-summary" style="background:none;border:0;padding:0;">${linesHtml(order.items)}${totalsHtml(order)}</div>
+            <p style="margin-top:1rem;">Lieferadresse: ${escapeHtml(order.customer.firstName)} ${escapeHtml(order.customer.lastName)}, ${escapeHtml(order.customer.street)}, ${escapeHtml(order.customer.zip)} ${escapeHtml(order.customer.city)}</p>
+            <div style="margin-top:2rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+              ${me ? `<a class="btn" id="to-order" href="konto.html?bestellung=${encodeURIComponent(order.no)}">Bestellung im Konto ansehen</a>` : `<a class="btn" href="register.html?next=konto.html">Konto erstellen</a>`}
+              <a class="btn btn-outline" href="shop.html">Weiter einkaufen</a>
+            </div>
+            <p style="margin-top:1.25rem;font-size:13px;color:var(--stone);">Widerruf &amp; Rückgabe: <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="retouren.html">Retouren</a></p>
+          </div>`;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function emptyView() {
+        root.innerHTML = `<div class="confirm-panel"><h1>Warenkorb leer</h1><p>Fügen Sie zuerst Artikel hinzu.</p><a class="btn" href="shop.html" style="margin-top:1.5rem;">Zum Shop</a></div>`;
+      }
+
+      function render() {
+        const items = loadCart();
+        if (!items.length) return emptyView();
+        const allDigital = items.every((i) => { const q = getProductById(i.id); return q && q.type === "gutschein"; });
+        const saved = getSavedCode();
+        const payNote = health.payment === "stripe"
+          ? "<strong>Zahlung:</strong> Nach „Zahlungspflichtig bestellen“ werden Sie zur gesicherten Stripe-Zahlungsseite weitergeleitet."
+          : "<strong>Demo-Zahlung:</strong> Es werden keine Kartendaten abgefragt und kein Geld bewegt. Die Bestellung wird serverseitig angelegt (Bestellnummer, Status „Bezahlt“ im Demo-Modus).";
+        root.innerHTML = `
+          <div class="checkout-layout">
+            <form class="checkout-form" id="checkout-form" novalidate>
+              <p class="eyebrow">Kasse</p>
+              <h1>Lieferung &amp; Kontakt</h1>
+              <p class="form-hint">${me ? "Sie sind angemeldet – die Bestellung erscheint in Ihrem Konto." : "Sie bestellen als Gast. <a href=\"login.html?next=checkout.html\">Anmelden</a> oder <a href=\"register.html?next=checkout.html\">Konto erstellen</a>."}</p>
+              <div class="form-msg is-error" id="form-msg" role="alert" aria-live="polite" hidden></div>
+              <div class="form-grid">
+                <div class="form-group"><label for="vorname">Vorname</label><input id="vorname" name="vorname" required autocomplete="given-name" maxlength="60" /><p class="field-error" id="err-firstName" hidden></p></div>
+                <div class="form-group"><label for="nachname">Nachname</label><input id="nachname" name="nachname" required autocomplete="family-name" maxlength="60" /><p class="field-error" id="err-lastName" hidden></p></div>
+                <div class="form-group full"><label for="email">E-Mail</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="254" /><p class="field-error" id="err-email" hidden></p></div>
+                <div class="form-group full"><label for="telefon">Telefon (optional)</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" maxlength="30" /></div>
+                <div class="form-group full"><label for="strasse">Straße &amp; Hausnummer${allDigital ? " (optional)" : ""}</label><input id="strasse" name="strasse" ${allDigital ? "" : "required"} autocomplete="street-address" maxlength="120" /><p class="field-error" id="err-street" hidden></p></div>
+                <div class="form-group"><label for="plz">PLZ</label><input id="plz" name="plz" ${allDigital ? "" : "required"} autocomplete="postal-code" maxlength="12" /><p class="field-error" id="err-zip" hidden></p></div>
+                <div class="form-group"><label for="ort">Ort</label><input id="ort" name="ort" ${allDigital ? "" : "required"} autocomplete="address-level2" maxlength="80" /><p class="field-error" id="err-city" hidden></p></div>
+                <div class="form-group full"><label for="land">Land</label><select id="land" name="land"><option value="AT" selected>Österreich</option><option value="DE">Deutschland</option><option value="CH">Schweiz</option></select></div>
+                <div class="form-group full"><label for="versand">Versandart</label><select id="versand" name="versand"><option value="standard">${allDigital ? "Digital per E-Mail — gratis" : "Standard (3–5 Werktage)"}</option>${allDigital ? "" : '<option value="express">Express</option>'}</select></div>
+              </div>
+              <div class="form-group full">
+                <span class="code-row-label">Rabattcode</span>
+                <div class="checkout-code"><input id="code-input" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="30" placeholder="Code eingeben" value="${escapeHtml(saved)}" aria-label="Rabattcode" /><button type="button" class="btn btn-outline" id="code-apply">Einlösen</button></div>
+                <p class="cart-code-msg" id="code-msg" role="status" aria-live="polite" hidden></p>
+              </div>
+              <div class="demo-pay-note">${payNote}</div>
+              <div class="form-group check-group checkout-accept">
+                <label class="check-label" for="accept"><input id="accept" name="accept" type="checkbox" required /> <span>Ich habe die <a href="agb.html" target="_blank" rel="noopener">AGB</a>, die <a href="widerruf.html" target="_blank" rel="noopener">Widerrufsbelehrung</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und akzeptiere sie.</span></label>
+                <p class="field-error" id="err-accept" hidden></p>
+              </div>
+              <button type="submit" class="btn btn-magnetic" id="pay-btn" data-label="${health.payment === "stripe" ? "Zahlungspflichtig bestellen" : "Demo-Bestellung abschließen"}">${health.payment === "stripe" ? "Zahlungspflichtig bestellen" : "Demo-Bestellung abschließen"}</button>
+            </form>
+            <aside class="checkout-summary" aria-live="polite">
+              <h2>Übersicht</h2>
+              <div id="summary-body"><p class="form-hint">Wird berechnet …</p></div>
+            </aside>
+          </div>`;
+        if (me) {
+          document.getElementById("vorname").value = me.firstName || "";
+          document.getElementById("nachname").value = me.lastName || "";
+          document.getElementById("email").value = me.email || "";
+        }
+        const $ = (id) => document.getElementById(id);
+        const showMsg = (t) => { const m = $("form-msg"); m.textContent = t; m.hidden = !t; if (t) m.scrollIntoView({ block: "nearest", behavior: "smooth" }); };
+        const codeMsg = (t, ok) => { const m = $("code-msg"); m.textContent = t; m.className = "cart-code-msg " + (ok ? "is-ok" : "is-error"); m.hidden = !t; };
+        let lastQuote = null, seq = 0;
+
+        function showQuote(q) {
+          lastQuote = q;
+          $("summary-body").innerHTML = linesHtml(q.items) + totalsHtml(q) +
+            (q.stockIssues.length ? q.stockIssues.map((s) => `<p class="checkout-stock-issue">${escapeHtml(s.name)}: ${s.available === 0 ? "leider ausverkauft" : "nur noch " + s.available + " verfügbar"}</p>`).join("") : "") +
+            (!q.allDigital && q.discount === null && q.shippingCents > 0 && q.versand === "standard" ? `<p class="cart-vat">Gratis-Versand ab ${cents(q.freeShippingFromCents)}.</p>` : "");
+          $("pay-btn").disabled = q.stockIssues.length > 0;
+        }
+        function quote(codeOverride) {
+          const my = ++seq;
+          const code = (codeOverride !== undefined ? codeOverride : $("code-input").value).trim();
+          return api("/quote", "POST", { items: itemsPayload(), versand: $("versand").value, code }).then((r) => {
+            if (my !== seq) return;
+            const d = r.data || {};
+            if (d.ok) {
+              showQuote(d.quote);
+              if (code) { saveCode(code.toUpperCase()); codeMsg(d.quote.discount ? `Code ${d.quote.discount.code} eingelöst: −${cents(d.quote.discount.cents)}` : "", true); }
+              else { saveCode(""); codeMsg("", true); }
+            } else if (d.field === "code") {
+              saveCode(""); codeMsg(d.error, false);
+              return api("/quote", "POST", { items: itemsPayload(), versand: $("versand").value }).then((r2) => { if (my === seq && r2.data && r2.data.ok) showQuote(r2.data.quote); });
+            } else { showMsg(d.error || "Warenkorb konnte nicht berechnet werden."); $("summary-body").innerHTML = '<p class="form-hint">Die Übersicht ist gerade nicht verfügbar.</p>'; }
+          }, () => { showMsg(UNREACH); $("summary-body").innerHTML = '<p class="form-hint">Die Übersicht ist gerade nicht verfügbar.</p>'; $("pay-btn").disabled = true; });
+        }
+        quote();
+        $("versand").addEventListener("change", () => quote());
+        $("code-apply").addEventListener("click", () => quote());
+        $("code-input").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); quote(); } });
+
+        $("checkout-form").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          form.querySelectorAll(".field-error").forEach((x) => { x.hidden = true; x.textContent = ""; });
+          showMsg("");
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          if (!$("accept").checked) { const x = $("err-accept"); x.textContent = "Bitte bestätigen Sie AGB, Widerrufsbelehrung und Datenschutz."; x.hidden = false; return; }
+          const btn = $("pay-btn"); btn.disabled = true; btn.textContent = "Bitte warten …";
+          const restore = () => { btn.disabled = false; btn.textContent = btn.getAttribute("data-label"); };
+          try {
+            const r = await api("/orders", "POST", {
+              items: itemsPayload(), versand: $("versand").value, code: $("code-input").value.trim(), accept: true,
+              customer: { firstName: $("vorname").value, lastName: $("nachname").value, email: $("email").value, phone: $("telefon").value, street: $("strasse").value, zip: $("plz").value, city: $("ort").value, country: $("land").value }
+            });
+            const d = r.data || {};
+            if (r.status === 201 && d.ok) {
+              if (d.mode === "stripe" && /^https:\/\//.test(d.redirectUrl || "")) { window.location.href = d.redirectUrl; return; }
+              renderConfirmation(d.order, d.mode); return;
+            }
+            if (d.fields) Object.keys(d.fields).forEach((k) => { const x = $("err-" + k); if (x) { x.textContent = d.fields[k]; x.hidden = false; } });
+            showMsg(d.error || "Bestellung nicht möglich.");
+            if (r.status === 409) { if (window.VeloraStock) VeloraStock.reload(); quote(); }
+            restore();
+          } catch (err) { showMsg(UNREACH); restore(); }
+        });
+        initMagneticButtons();
+      }
+
+      async function showStripeReturn(no, token) {
+        root.innerHTML = '<div class="confirm-panel"><h1>Zahlung wird geprüft …</h1></div>';
+        try {
+          for (let n = 0; n < 6; n++) {
+            const r = await api("/orders/lookup?no=" + encodeURIComponent(no) + "&token=" + encodeURIComponent(token));
+            const o = r.data && r.data.order;
+            if (o && o.status !== "neu") { renderConfirmation(o); return; }
+            await new Promise((res) => setTimeout(res, 1500));
+          }
+        } catch (_) {}
+        clearCart(); saveCode("");
+        root.innerHTML = `<div class="confirm-panel"><span class="confirm-badge">Zahlung abgeschlossen</span><h1>Vielen Dank</h1><p>Ihre Zahlung wurde bei Stripe abgeschlossen. Die Bestätigung per E-Mail folgt, sobald die Zahlung bestätigt ist.</p><p class="order-num">${escapeHtml(no)}</p><div style="margin-top:2rem;"><a class="btn" href="shop.html">Weiter einkaufen</a></div></div>`;
+      }
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        const q = new URLSearchParams(window.location.search);
+        try { const h = await api("/health"); if (h.data && h.data.ok) health = h.data; } catch (_) {}
+        try { me = await window.VeloraAuth.me(); } catch (_) { me = null; }
+        const no = q.get("bestellung"), tk = q.get("token");
+        if (q.get("bezahlt") === "1" && /^VL-\d{4}-\d{6}$/.test(no || "") && tk) return showStripeReturn(no, tk);
+        render();
+        if (q.get("abgebrochen") === "1") {
+          const hint = document.querySelector(".form-hint");
+          if (hint) hint.insertAdjacentHTML("afterbegin", "Die Zahlung wurde abgebrochen – Ihr Warenkorb ist unverändert. ");
+        }
+      });
+    })();
+  </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));}</script>
+</body>
+</html>
