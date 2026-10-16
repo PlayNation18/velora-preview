@@ -52,7 +52,7 @@
       tabs.forEach(function (b) { b.setAttribute("aria-selected", String(b.getAttribute("data-tab") === name)); });
       $$(".admin-pane").forEach(function (p) { p.hidden = p.id !== "pane-" + name; });
       flash("");
-      ({ orders: loadOrders, returns: loadReturns, stock: loadStock, discounts: loadDiscounts, newsletter: loadNewsletter, contacts: loadContacts })[name]();
+      var fn = ({ orders: loadOrders, returns: loadReturns, stock: loadStock, discounts: loadDiscounts, newsletter: loadNewsletter, contacts: loadContacts })[name]; if (typeof fn === "function") fn(); // weitere Tabs (Bewertungen, Wieder-da) lädt js/admin-features.js
     }
     select("orders");
   }

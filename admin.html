@@ -62,7 +62,8 @@
             <a href="shop.html?main=damen&amp;cat=taschen">Taschen</a>
             <a href="shop.html?main=damen&amp;cat=guertel">Gürtel</a>
             <a href="shop.html?main=damen&amp;cat=socken">Socken</a>
-            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear &amp; Dessous</a>
+            <a href="shop.html?main=damen&amp;cat=dessous">Dessous &amp; Unterwäsche</a>
+            <a href="shop.html?main=damen&amp;cat=lounge">Loungewear</a>
             <a href="shop.html?main=damen&amp;cat=accessoires">Accessoires</a>
           </div>
           <div class="nav-group nav-group-herren">
@@ -131,6 +132,8 @@
         <button type="button" role="tab" data-tab="discounts" aria-selected="false">Rabattcodes</button>
         <button type="button" role="tab" data-tab="newsletter" aria-selected="false">Newsletter</button>
         <button type="button" role="tab" data-tab="contacts" aria-selected="false">Kontakt</button>
+        <button type="button" role="tab" data-tab="reviews" aria-selected="false">Bewertungen <span id="rv-pending-badge"></span></button>
+        <button type="button" role="tab" data-tab="alerts" aria-selected="false">Wieder-da &amp; Warenkörbe</button>
       </div>
 
       <section class="admin-pane" id="pane-orders">
@@ -145,7 +148,7 @@
       </section>
 
       <section class="admin-pane" id="pane-stock" hidden>
-        <p class="admin-note">Leeres Feld = Bestand wird nicht verwaltet (unbegrenzt). 0 = ausverkauft (Warenkorb und Bestellung werden blockiert). Ab 5 zeigt der Shop „nur noch X“. <span id="s-tracked"></span></p>
+        <p class="admin-note">Leeres Feld = Bestand wird nicht verwaltet (unbegrenzt). 0 = ausverkauft (Warenkorb und Bestellung werden blockiert; Kund:innen können sich „Benachrichtigen“ lassen – beim Auffüllen geht die Mail automatisch raus). Ab 5 zeigt der Shop „nur noch X“. <span id="s-tracked"></span></p>
         <div class="admin-tools"><input id="s-product" list="s-list" placeholder="Produkt-ID oder Name, z. B. h48" aria-label="Produkt" autocomplete="off" /><datalist id="s-list"></datalist><button class="btn btn-sm" type="button" id="s-save">Speichern</button></div>
         <div id="s-grid"><p class="admin-note">Produkt wählen (ID oder Name).</p></div>
         <div class="admin-tools"><input id="s-bulk-n" type="number" min="0" placeholder="Menge" aria-label="Menge für alle Varianten" style="width:7rem" /><button class="btn btn-outline btn-sm" type="button" id="s-bulk">Alle Varianten dieses Produkts setzen</button></div>
@@ -172,6 +175,19 @@
       <section class="admin-pane" id="pane-newsletter" hidden>
         <p class="admin-note" id="n-count"></p>
         <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>E-Mail</th><th>Status</th><th>Angemeldet</th><th>Bestätigt</th></tr></thead><tbody id="n-body"></tbody></table></div>
+      </section>
+
+      <section class="admin-pane" id="pane-reviews" hidden>
+        <form class="admin-tools" id="rv-filter"><select id="rv-status" aria-label="Bewertungs-Status"><option value="pending">Zu prüfen</option><option value="approved">Freigeschaltet</option><option value="hidden">Ausgeblendet</option><option value="">Alle</option></select><button class="btn btn-sm" type="submit">Filtern</button><span class="admin-note" id="rv-counts"></span></form>
+        <div id="rv-admin-list"></div>
+      </section>
+
+      <section class="admin-pane" id="pane-alerts" hidden>
+        <h3>„Benachrichtige mich“ (ausverkaufte Größen)</h3>
+        <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>Eingetragen</th><th>E-Mail</th><th>Artikel</th><th>Farbe</th><th>Größe</th><th>Benachrichtigt</th></tr></thead><tbody id="al-body"></tbody></table></div>
+        <h3 style="margin-top:2rem">Warenkörbe (Erinnerung)</h3>
+        <p class="admin-note" id="ct-note"></p>
+        <div class="admin-tbl-wrap"><table class="admin-tbl"><thead><tr><th>Zuletzt geändert</th><th>E-Mail</th><th>Konto</th><th>Artikel</th><th>Einwilligung</th><th>Erinnert</th><th>Bestellt</th></tr></thead><tbody id="ct-body"></tbody></table></div>
       </section>
 
       <section class="admin-pane" id="pane-contacts" hidden>
@@ -212,5 +228,6 @@
   <script src="js/config.js?v=herbst22"></script>
   <script src="js/auth.js?v=herbst22"></script>
   <script src="js/admin.js?v=herbst22"></script>
+  <script src="js/admin-features.js?v=herbst22"></script>
 </body>
 </html>

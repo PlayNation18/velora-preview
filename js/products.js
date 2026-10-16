@@ -4480,6 +4480,541 @@ const VELORA_PRODUCTS = [
       { id: "w100", name: "100 €", hex: "#c5a059", price: 100, image: "img/neu/gutschein/gutschein-100.jpg?v=herbst22" },
       { id: "w200", name: "200 €", hex: "#c5a059", price: 200, image: "img/neu/gutschein/gutschein-200.jpg?v=herbst22" }
     ]
+  },
+  {
+    "id": "d120",
+    "name": "Spitzen-Set Amélie",
+    "category": "damen",
+    "gender": "damen",
+    "audience": "Damen · Dessous & Unterwäsche",
+    "type": "dessous",
+    "price": 79,
+    "color": "#efe2c8",
+    "accent": "#c5a059",
+    "image": "img/neu/damen/d120-creme.jpg?v=herbst22",
+    "description": "Spitzen-Set aus BH mit leicht vorgeformten Cups und String – feine florale Spitze mit Bogenkante, verstellbare Träger. Am Steg des BHs und am Bund des Strings sitzt das kleine goldene VELORA-Label, identisch in jeder Farbe. Immer mit String, nie mit Slip. Erhältlich in 13 Farben.",
+    "fabric": "Florale Spitze (Schätzung: Polyamid/Elasthan ca. 88/12 %), Cups leicht vorgeformt, Zwickel Baumwolle · alle Material- und Gewichtsangaben sind Schätzungen",
+    "fit": "BH mit verstellbaren Trägern und Haken-Verschluss, String mit schmalem Bund · BH 70A–85D; der String wird passend geliefert: Unterbrustweite 70 → XS, 75 → S, 80 → M, 85 → L",
+    "madeIn": "Muster / noch nicht in Produktion · Hardware: VELORA-Label, Ringe und Schieber gold gebürstet (in allen Farben identisch)",
+    "featured": false,
+    "sizes": [
+      "70A",
+      "70B",
+      "70C",
+      "70D",
+      "75A",
+      "75B",
+      "75C",
+      "75D",
+      "80A",
+      "80B",
+      "80C",
+      "80D",
+      "85A",
+      "85B",
+      "85C",
+      "85D"
+    ],
+    "defaultSize": "75B",
+    "sizeHint": "BH 70A–85D · String passend XS–L",
+    "tags": [
+      "dessous",
+      "unterwaesche",
+      "lingerie",
+      "damen",
+      "herbst",
+      "gold",
+      "eigenmarke",
+      "spitze",
+      "string",
+      "bh",
+      "set"
+    ],
+    "matches": [
+      "d121",
+      "d122",
+      "d123"
+    ],
+    "colors": [
+      {
+        "id": "creme",
+        "name": "Creme",
+        "hex": "#efe2c8",
+        "image": "img/neu/damen/d120-creme.jpg?v=herbst22"
+      },
+      {
+        "id": "blush",
+        "name": "Blush",
+        "hex": "#e9c3b2",
+        "image": "img/neu/damen/d120-blush.jpg?v=herbst22"
+      },
+      {
+        "id": "anthrazit",
+        "name": "Anthrazit",
+        "hex": "#3a3b3f",
+        "image": "img/neu/damen/d120-anthrazit.jpg?v=herbst22"
+      },
+      {
+        "id": "petrol",
+        "name": "Petrol",
+        "hex": "#127c86",
+        "image": "img/neu/damen/d120-petrol.jpg?v=herbst22"
+      },
+      {
+        "id": "mint",
+        "name": "Mint",
+        "hex": "#a9d8c0",
+        "image": "img/neu/damen/d120-mint.jpg?v=herbst22"
+      },
+      {
+        "id": "koralle",
+        "name": "Koralle",
+        "hex": "#ec8a6d",
+        "image": "img/neu/damen/d120-koralle.jpg?v=herbst22"
+      },
+      {
+        "id": "lavendel",
+        "name": "Lavendel",
+        "hex": "#a99ad0",
+        "image": "img/neu/damen/d120-lavendel.jpg?v=herbst22"
+      },
+      {
+        "id": "rose",
+        "name": "Rosé-Satin",
+        "hex": "#c9907c",
+        "image": "img/neu/damen/d120-rose.jpg?v=herbst22"
+      },
+      {
+        "id": "karamell",
+        "name": "Karamell",
+        "hex": "#c27a45",
+        "image": "img/neu/damen/d120-karamell.jpg?v=herbst22"
+      },
+      {
+        "id": "rost",
+        "name": "Rost",
+        "hex": "#c4612e",
+        "image": "img/neu/damen/d120-rost.jpg?v=herbst22"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "hex": "#1f2c55",
+        "image": "img/neu/damen/d120-navy.jpg?v=herbst22"
+      },
+      {
+        "id": "burgund-smaragd",
+        "name": "Burgunder / Smaragd",
+        "hex": "#7a1f33",
+        "image": "img/neu/damen/d120-burgund-smaragd.jpg?v=herbst22"
+      },
+      {
+        "id": "rosa",
+        "name": "Rosa",
+        "hex": "#efbcc4",
+        "image": "img/neu/damen/d120-rosa.jpg?v=herbst22"
+      }
+    ]
+  },
+  {
+    "id": "d121",
+    "name": "Soft-Set Seconde Peau",
+    "category": "damen",
+    "gender": "damen",
+    "audience": "Damen · Dessous & Unterwäsche",
+    "type": "dessous",
+    "price": 59,
+    "color": "#e2c3a6",
+    "accent": "#c5a059",
+    "image": "img/neu/damen/d121-nude.jpg?v=herbst22",
+    "description": "Glattes T-Shirt-Set aus BH mit nahtlosen Formcups und String – unsichtbar unter jedem Shirt. Goldene Schieber an Trägern und Bund, dazu das kleine goldene VELORA-Label, identisch in jeder Farbe. Immer mit String, nie mit Slip. Erhältlich in 12 Farben.",
+    "fabric": "Glatte Mikrofaser (Schätzung: Polyamid/Elasthan ca. 80/20 %), nahtlose T-Shirt-Cups mit Schaumformung, Zwickel Baumwolle · alle Material- und Gewichtsangaben sind Schätzungen",
+    "fit": "BH mit verstellbaren Trägern und Haken-Verschluss, String mit schmalem Bund · BH 70A–85D; der String wird passend geliefert: Unterbrustweite 70 → XS, 75 → S, 80 → M, 85 → L",
+    "madeIn": "Muster / noch nicht in Produktion · Hardware: VELORA-Label, Ringe und Schieber gold gebürstet (in allen Farben identisch)",
+    "featured": false,
+    "sizes": [
+      "70A",
+      "70B",
+      "70C",
+      "70D",
+      "75A",
+      "75B",
+      "75C",
+      "75D",
+      "80A",
+      "80B",
+      "80C",
+      "80D",
+      "85A",
+      "85B",
+      "85C",
+      "85D"
+    ],
+    "defaultSize": "75B",
+    "sizeHint": "BH 70A–85D · String passend XS–L",
+    "tags": [
+      "dessous",
+      "unterwaesche",
+      "lingerie",
+      "damen",
+      "herbst",
+      "gold",
+      "eigenmarke",
+      "soft",
+      "mikrofaser",
+      "t-shirt-bh",
+      "string",
+      "set",
+      "basic"
+    ],
+    "matches": [
+      "d120",
+      "d122",
+      "d123"
+    ],
+    "colors": [
+      {
+        "id": "nude",
+        "name": "Nude",
+        "hex": "#e2c3a6",
+        "image": "img/neu/damen/d121-nude.jpg?v=herbst22"
+      },
+      {
+        "id": "creme",
+        "name": "Creme",
+        "hex": "#efe4cf",
+        "image": "img/neu/damen/d121-creme.jpg?v=herbst22"
+      },
+      {
+        "id": "anthrazit",
+        "name": "Anthrazit",
+        "hex": "#46474b",
+        "image": "img/neu/damen/d121-anthrazit.jpg?v=herbst22"
+      },
+      {
+        "id": "petrol",
+        "name": "Petrol",
+        "hex": "#11808b",
+        "image": "img/neu/damen/d121-petrol.jpg?v=herbst22"
+      },
+      {
+        "id": "mint",
+        "name": "Mint",
+        "hex": "#b9dcc3",
+        "image": "img/neu/damen/d121-mint.jpg?v=herbst22"
+      },
+      {
+        "id": "koralle",
+        "name": "Koralle",
+        "hex": "#e66f5c",
+        "image": "img/neu/damen/d121-koralle.jpg?v=herbst22"
+      },
+      {
+        "id": "lavendel",
+        "name": "Lavendel",
+        "hex": "#b7a9d8",
+        "image": "img/neu/damen/d121-lavendel.jpg?v=herbst22"
+      },
+      {
+        "id": "bronze",
+        "name": "Bronze-Schimmer",
+        "hex": "#b8805f",
+        "image": "img/neu/damen/d121-bronze.jpg?v=herbst22"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "hex": "#1e2a4f",
+        "image": "img/neu/damen/d121-navy.jpg?v=herbst22"
+      },
+      {
+        "id": "burgund",
+        "name": "Burgunder",
+        "hex": "#6e1a2c",
+        "image": "img/neu/damen/d121-burgund.jpg?v=herbst22"
+      },
+      {
+        "id": "tanne",
+        "name": "Tannengrün",
+        "hex": "#1d5a3c",
+        "image": "img/neu/damen/d121-tanne.jpg?v=herbst22"
+      },
+      {
+        "id": "rosa",
+        "name": "Rosa",
+        "hex": "#f0b8c0",
+        "image": "img/neu/damen/d121-rosa.jpg?v=herbst22"
+      }
+    ]
+  },
+  {
+    "id": "d122",
+    "name": "Ripp-Set Côtelé",
+    "category": "damen",
+    "gender": "damen",
+    "audience": "Damen · Dessous & Unterwäsche",
+    "type": "dessous",
+    "price": 55,
+    "color": "#141414",
+    "accent": "#c5a059",
+    "image": "img/neu/damen/d122-schwarz.jpg?v=herbst22",
+    "description": "Geripptes Set aus BH mit vorgeformten Cups und String – weicher Feinripp, sportlich-clean. Goldene Ringe an Trägern und Bund und das goldene VELORA-Label vorne, identisch in jeder Farbe. Immer mit String, nie mit Slip. Erhältlich in 13 Farben.",
+    "fabric": "Feinripp-Jersey (Schätzung: Baumwolle/Modal/Elasthan ca. 47/47/6 %), Cups vorgeformt, Zwickel Baumwolle · Glitzer-Varianten mit Lurex-Anteil (Annahme) · alle Material- und Gewichtsangaben sind Schätzungen",
+    "fit": "BH mit verstellbaren Trägern und Haken-Verschluss, String mit schmalem Bund · BH 70A–85D; der String wird passend geliefert: Unterbrustweite 70 → XS, 75 → S, 80 → M, 85 → L",
+    "madeIn": "Muster / noch nicht in Produktion · Hardware: VELORA-Label, Ringe und Schieber gold gebürstet (in allen Farben identisch)",
+    "featured": false,
+    "sizes": [
+      "70A",
+      "70B",
+      "70C",
+      "70D",
+      "75A",
+      "75B",
+      "75C",
+      "75D",
+      "80A",
+      "80B",
+      "80C",
+      "80D",
+      "85A",
+      "85B",
+      "85C",
+      "85D"
+    ],
+    "defaultSize": "75B",
+    "sizeHint": "BH 70A–85D · String passend XS–L",
+    "tags": [
+      "dessous",
+      "unterwaesche",
+      "lingerie",
+      "damen",
+      "herbst",
+      "gold",
+      "eigenmarke",
+      "ripp",
+      "feinripp",
+      "string",
+      "set",
+      "basic"
+    ],
+    "matches": [
+      "d120",
+      "d121",
+      "d123"
+    ],
+    "colors": [
+      {
+        "id": "schwarz",
+        "name": "Schwarz",
+        "hex": "#141414",
+        "image": "img/neu/damen/d122-schwarz.jpg?v=herbst22"
+      },
+      {
+        "id": "rot",
+        "name": "Rot",
+        "hex": "#b0151f",
+        "image": "img/neu/damen/d122-rot.jpg?v=herbst22"
+      },
+      {
+        "id": "royal",
+        "name": "Royalblau",
+        "hex": "#1f3fa8",
+        "image": "img/neu/damen/d122-royal.jpg?v=herbst22"
+      },
+      {
+        "id": "gruen",
+        "name": "Waldgrün",
+        "hex": "#17553a",
+        "image": "img/neu/damen/d122-gruen.jpg?v=herbst22"
+      },
+      {
+        "id": "pink",
+        "name": "Pink",
+        "hex": "#e53d8f",
+        "image": "img/neu/damen/d122-pink.jpg?v=herbst22"
+      },
+      {
+        "id": "burgund",
+        "name": "Burgunder",
+        "hex": "#6c1a29",
+        "image": "img/neu/damen/d122-burgund.jpg?v=herbst22"
+      },
+      {
+        "id": "braun",
+        "name": "Mokka",
+        "hex": "#4a2c1e",
+        "image": "img/neu/damen/d122-braun.jpg?v=herbst22"
+      },
+      {
+        "id": "weiss",
+        "name": "Weiß",
+        "hex": "#f3efe7",
+        "image": "img/neu/damen/d122-weiss.jpg?v=herbst22"
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "hex": "#ef6a1c",
+        "image": "img/neu/damen/d122-orange.jpg?v=herbst22"
+      },
+      {
+        "id": "nude",
+        "name": "Nude",
+        "hex": "#d9bea3",
+        "image": "img/neu/damen/d122-nude.jpg?v=herbst22"
+      },
+      {
+        "id": "floral",
+        "name": "Blumen",
+        "hex": "#e9c9cf",
+        "image": "img/neu/damen/d122-floral.jpg?v=herbst22"
+      },
+      {
+        "id": "gold",
+        "name": "Gold-Glitzer",
+        "hex": "#c9a85a",
+        "image": "img/neu/damen/d122-gold.jpg?v=herbst22",
+        "price": 65
+      },
+      {
+        "id": "silber",
+        "name": "Silber-Glitzer",
+        "hex": "#a7abb0",
+        "image": "img/neu/damen/d122-silber.jpg?v=herbst22",
+        "price": 65
+      }
+    ]
+  },
+  {
+    "id": "d123",
+    "name": "Spitzen-Set Couture",
+    "category": "damen",
+    "gender": "damen",
+    "audience": "Damen · Dessous & Unterwäsche",
+    "type": "dessous",
+    "price": 89,
+    "color": "#9e1424",
+    "accent": "#c5a059",
+    "image": "img/neu/damen/d123-rot.jpg?v=herbst23",
+    "description": "Bügel-Set aus transparenter Couture-Spitze mit Bogenkante: BH und String mit zarten Trägern. Goldene Ringe und Schieber, dazu das goldene VELORA-Label an Steg und Bund, identisch in jeder Farbe. Immer mit String, nie mit Slip. Erhältlich in 12 Farben.",
+    "fabric": "Couture-Spitze (Schätzung: Polyamid/Elasthan ca. 85/15 %), Bügel-BH halbtransparent, Zwickel Baumwolle · alle Material- und Gewichtsangaben sind Schätzungen",
+    "fit": "BH mit verstellbaren Trägern und Haken-Verschluss, String mit schmalem Bund · BH 70A–85D; der String wird passend geliefert: Unterbrustweite 70 → XS, 75 → S, 80 → M, 85 → L",
+    "madeIn": "Muster / noch nicht in Produktion · Hardware: VELORA-Label, Ringe und Schieber gold gebürstet (in allen Farben identisch)",
+    "featured": false,
+    "sizes": [
+      "70A",
+      "70B",
+      "70C",
+      "70D",
+      "75A",
+      "75B",
+      "75C",
+      "75D",
+      "80A",
+      "80B",
+      "80C",
+      "80D",
+      "85A",
+      "85B",
+      "85C",
+      "85D"
+    ],
+    "defaultSize": "75B",
+    "sizeHint": "BH 70A–85D · String passend XS–L",
+    "tags": [
+      "dessous",
+      "unterwaesche",
+      "lingerie",
+      "damen",
+      "herbst",
+      "gold",
+      "eigenmarke",
+      "spitze",
+      "buegel",
+      "string",
+      "set",
+      "luxus"
+    ],
+    "matches": [
+      "d120",
+      "d121",
+      "d122"
+    ],
+    "colors": [
+      {
+        "id": "rot",
+        "name": "Rot",
+        "hex": "#9e1424",
+        "image": "img/neu/damen/d123-rot.jpg?v=herbst23"
+      },
+      {
+        "id": "royal",
+        "name": "Royalblau",
+        "hex": "#1e44b0",
+        "image": "img/neu/damen/d123-royal.jpg?v=herbst23"
+      },
+      {
+        "id": "gruen",
+        "name": "Smaragd",
+        "hex": "#13573d",
+        "image": "img/neu/damen/d123-gruen.jpg?v=herbst23"
+      },
+      {
+        "id": "pink",
+        "name": "Pink",
+        "hex": "#df3c8c",
+        "image": "img/neu/damen/d123-pink.jpg?v=herbst23"
+      },
+      {
+        "id": "burgund",
+        "name": "Burgunder",
+        "hex": "#5f1430",
+        "image": "img/neu/damen/d123-burgund.jpg?v=herbst23"
+      },
+      {
+        "id": "braun",
+        "name": "Mokka",
+        "hex": "#40281c",
+        "image": "img/neu/damen/d123-braun.jpg?v=herbst23"
+      },
+      {
+        "id": "weiss",
+        "name": "Weiß",
+        "hex": "#f2eee6",
+        "image": "img/neu/damen/d123-weiss.jpg?v=herbst23"
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "hex": "#ec6417",
+        "image": "img/neu/damen/d123-orange.jpg?v=herbst23"
+      },
+      {
+        "id": "nude",
+        "name": "Nude",
+        "hex": "#cfb29c",
+        "image": "img/neu/damen/d123-nude.jpg?v=herbst23"
+      },
+      {
+        "id": "violett",
+        "name": "Violett",
+        "hex": "#5a2690",
+        "image": "img/neu/damen/d123-violett.jpg?v=herbst23"
+      },
+      {
+        "id": "floral",
+        "name": "Blumen",
+        "hex": "#ead6cf",
+        "image": "img/neu/damen/d123-floral.jpg?v=herbst23"
+      },
+      {
+        "id": "gold",
+        "name": "Gold",
+        "hex": "#c8a24a",
+        "image": "img/neu/damen/d123-gold.jpg?v=herbst23",
+        "price": 99
+      }
+    ]
   }
 ];
 
@@ -4499,7 +5034,8 @@ const CATEGORY_LABELS = {
   bademode: "Bademode",
   schuhe: "Schuhe",
   socken: "Socken",
-  lounge: "Loungewear & Dessous",
+  dessous: "Dessous & Unterwäsche",
+  lounge: "Loungewear",
   pyjama: "Loungewear & Pyjama",
   guertel: "Gürtel",
   taschen: "Taschen",
@@ -4513,7 +5049,7 @@ const CATEGORY_LABELS = {
 };
 
 /** Unterkategorien („Tabs“) in fester Reihenfolge. Jedes Produkt liegt über seinen Typ in genau einer Unterkategorie. */
-const TAB_ORDER = ["polos", "strick", "oberteile", "hosen", "kleider", "jacken", "maentel", "westen", "sets", "sport", "bademode", "unterwaesche", "pyjama", "schuhe", "socken", "lounge", "guertel", "taschen", "accessoires"];
+const TAB_ORDER = ["polos", "strick", "oberteile", "hosen", "kleider", "jacken", "maentel", "westen", "sets", "sport", "bademode", "unterwaesche", "pyjama", "schuhe", "socken", "dessous", "lounge", "guertel", "taschen", "accessoires"];
 
 /** Sammel-Kategorien quer über alles: Geschenke (≤ 100 € + Gutschein), Sale (Demo-Altpreis), Herbst (Tag). */
 const COLLECTION_TABS = ["geschenke", "sale", "herbst"];
@@ -4524,7 +5060,7 @@ const COLLECTION_TABS = ["geschenke", "sale", "herbst"];
 const WORLDS = ["damen", "herren"];
 const GENDER_LABELS = { damen: "Damen", herren: "Herren", unisex: "Unisex" };
 const MAIN_CATEGORIES = [
-  { id: "damen", label: "Damen", subs: ["kleider", "oberteile", "strick", "hosen", "jacken", "maentel", "westen", "sets", "sport", "bademode", "schuhe", "taschen", "guertel", "socken", "lounge", "accessoires"] },
+  { id: "damen", label: "Damen", subs: ["kleider", "oberteile", "strick", "hosen", "jacken", "maentel", "westen", "sets", "sport", "bademode", "schuhe", "taschen", "guertel", "socken", "dessous", "lounge", "accessoires"] },
   { id: "herren", label: "Herren", subs: ["polos", "strick", "oberteile", "hosen", "jacken", "maentel", "westen", "sets", "sport", "bademode", "unterwaesche", "pyjama", "schuhe", "taschen", "guertel", "socken", "accessoires"] },
   { id: "geschenke", label: "Geschenke", collection: true },
   { id: "sale", label: "Sale", collection: true },
@@ -4536,7 +5072,7 @@ const MAIN_IDS = MAIN_CATEGORIES.map((m) => m.id);
  *  werden als Gruppen-Filter über beide Welten gelesen (die Welt kann dann per Damen/Herren-Pill gewählt werden). */
 const LEGACY_GROUPS = [
   { id: "accessoires-schuhe", label: "Accessoires & Schuhe", subs: ["schuhe", "taschen", "guertel", "socken", "accessoires"] },
-  { id: "lounge-dessous", label: "Lounge & Dessous", subs: ["lounge", "pyjama"] }
+  { id: "lounge-dessous", label: "Lounge & Dessous", subs: ["dessous", "lounge", "pyjama"] }
 ];
 CATEGORY_LABELS["accessoires-schuhe"] = "Accessoires & Schuhe";
 CATEGORY_LABELS["lounge-dessous"] = "Lounge & Dessous";
@@ -4557,7 +5093,7 @@ const TAB_BY_TYPE = {
   schuhe: "schuhe",
   socken: "socken",
   pyjama: "pyjama",
-  lounge: "lounge", dessous: "lounge", accessoire: "lounge", body: "lounge", onesie: "lounge",
+  lounge: "lounge", dessous: "dessous", accessoire: "lounge", body: "lounge", onesie: "lounge",
   guertel: "guertel",
   tasche: "taschen",
   brille: "accessoires",
